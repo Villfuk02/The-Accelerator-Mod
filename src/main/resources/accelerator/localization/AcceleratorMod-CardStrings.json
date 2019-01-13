@@ -1,0 +1,70 @@
+{	
+	"Strike": {
+		"NAME": "Strike",
+		"DESCRIPTION": "Channel a Potential Orb with !D! Potency."
+	},
+	"Defend": {
+		"NAME": "Defend",
+		"DESCRIPTION": "Channel a Magnetic Orb with !B! Potency."
+	},
+	"Stream": {
+		"NAME": "Stream",
+		"DESCRIPTION": "Channel 2 Kinetic Orbs with !D! Potency."
+	},
+	"Reverse": {
+		"NAME": "Reverse",
+		"DESCRIPTION": "Reverse the order of your Orbs. NL Evoke your next Orb.",
+		"UPGRADE_DESCRIPTION": "Retain. NL Reverse the order of your Orbs. NL Evoke your next Orb."
+	},
+	"SafeBoot": {
+		"NAME": "Safe Boot",
+		"DESCRIPTION": "Innate. NL Channel a Magnetic Orb with !B! Potency. NL Evoke your next orb. NL Exhaust."
+	},
+	"Propulsion": {
+		"NAME": "Propulsion",
+		"DESCRIPTION": "Channel a Thermal Orb with !D! Potency. NL Draw 1 card."
+	},
+	"Blaze": {
+		"NAME": "Blaze",
+		"DESCRIPTION": "Channel !M! Thermal Orbs with !D! Potency. NL Exhaust 1 card from your hand."
+	},
+	"Friction": {
+		"NAME": "Friction",
+		"DESCRIPTION": "Every time you Evoke a Kinetic Orb, Channel a Thermal Orb with the same Potency. NL Ethereal.",
+		"UPGRADE_DESCRIPTION": "Every time you Evoke a Kinetic Orb, Channel a Thermal Orb with the same Potency. NL Ethereal."
+	},
+	"Intensify": {
+		"NAME": "Intensify",
+		"DESCRIPTION": "Gain 1 Orb slot. NL Gain 1 Focus."
+	},
+	"MagneticLink": {
+		"NAME": "Magnetic Link",
+		"DESCRIPTION": "Channel a Magnetic Orb with !B! Potency !M! times."
+	},
+	"Threat": {
+		"NAME": "Threat",
+		"DESCRIPTION": "Channel a Potential Orb with !D! Potency. NL Apply 1 Vulnerable."
+	},
+	"Knockback": {
+		"NAME": "Knockback",
+		"DESCRIPTION": "Channel a Kinetic Orb with !D! Potency. NL Discard 2 cards."
+	},
+	"Deflect": {
+		"NAME": "Deflect",
+		"DESCRIPTION": "Channel a Magnetic Orb with !B! Potency (Has 1 more potency for each Magnetic Orb currently Channeled)."
+	},
+	"Polarize": {
+		"NAME": "Polarize",
+		"DESCRIPTION": "Merge ALL adjacent Magnetic Orbs. NL Channel a Magnetic Orb with !B! Potency."
+	},
+	"MergeSort": {
+		"NAME": "Merge Sort",
+		"DESCRIPTION": "Merge ALL Orbs of the same type and sort them by potency (descending). NL Draw 1 card.",
+		"UPGRADE_DESCRIPTION": "Retain. NL Merge ALL Orbs of the same type and sort them by potency (descending). NL Draw 1 card."
+	},
+	"NuclearDecay": {
+		"NAME": "Nuclear Decay",
+		"DESCRIPTION": "Channel a Nuclear Orb with !M! Potency. NL (37 Damage in total)",
+		"UPGRADE_DESCRIPTION": "Channel a Nuclear Orb with !M! Potency. NL (49 Damage in total)"
+	}
+}

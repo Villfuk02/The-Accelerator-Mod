@@ -1,0 +1,43 @@
+{
+  "PotentialOrb": {
+    "NAME": "Potential Orb",
+    "DESCRIPTION": [
+      "At the start of every turn, increases it's #yPotency by #b",
+      "% (rounded up). Deals #b",
+      " #yDamage to #r",
+      " when #yEvoked."
+    ]
+  },
+  "KineticOrb": {
+    "NAME": "Kinetic Orb",
+    "DESCRIPTION": [
+      "At the start of every turn, decreases it's #yPotency by #b1/",
+      "th (rounded up). Deals #b",
+      " #yDamage to #r",
+      " when #yEvoked.",
+      "At the start of every turn, decreases it's #yPotency to #r0. Deals #b"
+    ]
+  },
+  "MagneticOrb": {
+    "NAME": "Magnetic Orb",
+    "DESCRIPTION": [
+      "At the start of every turn, increases it's #yPotency by #b",
+      " for every #yMagnetic Orb currently chanelled. When #yEvoked, Gain #b",
+      " #yBlock and #yEvoke next Orb."
+    ]
+  },
+  "ThermalOrb": {
+    "NAME": "Thermal Orb",
+    "DESCRIPTION": [
+      "At the start of every turn, swaps it's position with the orb in front of it. Deals #b",
+      " #yDamage to #rALL #renemies when #yEvoked."
+    ]
+  },
+  "NuclearOrb": {
+    "NAME": "Nuclear Orb",
+    "DESCRIPTION": [
+      "When #yEvoked, Deals #b",
+      " #yDamage to #ra #rrandom #renemy and #yChannels #b2 #yNuclear Orbs with half the Potency. Damage dealt by this Orb is #rNOT considered as Attack damage."
+    ]
+  }
+}

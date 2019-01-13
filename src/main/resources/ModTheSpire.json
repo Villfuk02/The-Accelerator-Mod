@@ -1,0 +1,14 @@
+{
+  "modid": "Sts-AcceleratorMod",
+  "name": "The Accelerator",
+  "author_list": [
+    "Villfuk02"
+  ],
+  "description": "Adds The Accelerator as a new playable character.",
+  "version": "0.0.0",
+  "dependencies": [
+    "basemod"
+  ],
+  "sts_version": "99-99-1999",
+  "mts_version": "3.6.0"
+}
