@@ -23,7 +23,7 @@ public class Reverse extends CustomCard{
 	private static final int COST = 0;
 
 	public Reverse() {
-		super(ID + AcceleratorMod.SUFFIX, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
+		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
         		AbstractCard.CardType.SKILL, AbstractCardEnum.ACC,
         		AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
 	}

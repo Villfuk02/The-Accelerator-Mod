@@ -24,7 +24,7 @@ public class FrictionPower extends AbstractPower
     
     public FrictionPower(final AbstractCreature owner, final int newAmount) {
         this.name = NAME;
-        this.ID = NAME + AcceleratorMod.SUFFIX;
+        this.ID = AcceleratorMod.PREFIX + NAME;
         this.owner = owner;
         this.amount = newAmount;
         this.updateDescription();

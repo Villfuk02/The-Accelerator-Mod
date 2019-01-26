@@ -26,10 +26,11 @@ public class Strike extends CustomCard{
 	private static final int UPGRADE = 3;
 
 	public Strike() {
-		super(ID + AcceleratorMod.SUFFIX, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
+		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
         		AbstractCard.CardType.ATTACK, AbstractCardEnum.ACC,
         		AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = DMG;
+		this.tags.add(AbstractCard.CardTags.STRIKE);
 		this.tags.add(BaseModCardTags.BASIC_STRIKE);
 	}
 

@@ -13,7 +13,7 @@ public class Cloud extends CustomRelic {
 	public static final String ID = "Cloud";
 	
 	public Cloud() {
-		super(ID + AcceleratorMod.SUFFIX, new Texture(AcceleratorMod.RELIC_IMG_PATH + ID + ".png"),
+		super(AcceleratorMod.PREFIX + ID, new Texture(AcceleratorMod.RELIC_IMG_PATH + ID + ".png"),
 				RelicTier.STARTER, LandingSound.MAGICAL); 
 	}
 	

@@ -4,9 +4,9 @@ import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.FocusPower;
 
@@ -16,7 +16,7 @@ public class PotentialOrb extends CustomOrb {
 public static final String ID = "PotentialOrb";
 
 	
-	public PotentialOrb(int potency, AbstractMonster target) {
+	public PotentialOrb(int potency, AbstractCreature target) {
 		super(ID, Color.ORANGE, Color.PURPLE, 
 				AcceleratorMod.ORB_TEXTURE_PATH + ID + ".png", 
 				potency, target);
@@ -34,9 +34,9 @@ public static final String ID = "PotentialOrb";
 		int a = 0;
 		if(AbstractDungeon.player.hasPower(FocusPower.POWER_ID))
 			a = AbstractDungeon.player.getPower(FocusPower.POWER_ID).amount;
-		a += 2;
-		a *= 10;
-		this.description = this.descriptions[0] + a + this.descriptions[1] + potency + this.descriptions[2] + (target != null?target.name:"a #rrandom #renemy") + this.descriptions[3];
+		a += 3;
+		a *= 5;
+		this.description = this.descriptions[0] + a + this.descriptions[1] + potency + this.descriptions[2] + getTargetDescription() + this.descriptions[3];
 		}
 	
 	@Override
@@ -54,9 +54,9 @@ public static final String ID = "PotentialOrb";
 	@Override
 	public void evokeEffectUnique() {
 		if(target != null && !target.isDeadOrEscaped())
-			AbstractDungeon.actionManager.addToBottom(new DamageAction(target, new DamageInfo(p, potency), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+			AbstractDungeon.actionManager.addToTop(new DamageAction(target, new DamageInfo(p, potency), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 		else
-			AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.getRandomMonster(), new DamageInfo(p, potency), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+			AbstractDungeon.actionManager.addToTop(new DamageAction(AbstractDungeon.getRandomMonster(), new DamageInfo(p, potency), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 	}
 	
 	@Override
@@ -65,10 +65,12 @@ public static final String ID = "PotentialOrb";
 		int a = 0;
 		if(AbstractDungeon.player.hasPower(FocusPower.POWER_ID))
 			a = AbstractDungeon.player.getPower(FocusPower.POWER_ID).amount;
-		a += 2;		
-		r = (r*(10+a)+9)/10;
+		a += 3;		
+		r = (r*(20+a)+19)/20;
 		if(r < 0)
 			r = 0;
+		if(r > 999)
+			r = 999;
 		return r;
 	}
 	

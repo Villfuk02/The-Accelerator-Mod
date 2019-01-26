@@ -22,10 +22,10 @@ public class MagneticLink extends CustomCard{
 	private static final int COST = 1;
 	private static final int MAGIC = 2;
 	private static final int UP = 1;
-	private static final int BLOCK = 0;
+	private static final int BLOCK = 3;
 
 	public MagneticLink() {
-		super(ID + AcceleratorMod.SUFFIX, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
+		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
         		AbstractCard.CardType.SKILL, AbstractCardEnum.ACC,
         		AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 		this.baseMagicNumber = this.magicNumber = MAGIC;

@@ -3,7 +3,6 @@ package accelerator.character;
 import java.util.ArrayList;
 
 import basemod.abstracts.CustomPlayer;
-import basemod.animations.SpriterAnimation;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -33,10 +32,14 @@ public class TheAccelerator extends CustomPlayer{
 	public static final String NAME = "The Orang";
 
 	public TheAccelerator(String name, PlayerClass setClass) {
-		super(name, setClass, null, null, null, new SpriterAnimation(AcceleratorMod.ANIMATION_PATH));
+		super(name, setClass, null, AcceleratorMod.ENERGY_ORB_PATH + "vfx.png", (String)null, (String)null);
 		
 		initializeClass(null, AcceleratorMod.SHOULDER_2, AcceleratorMod.SHOULDER_1, AcceleratorMod.CORPSE,
 				getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(3));
+		
+		this.loadAnimation(AcceleratorMod.SKELETON_ATLAS, AcceleratorMod.SKELETON_JSON, 1.0f);
+		
+		this.energyOrb = new AcceleratorEnergyOrb();
 		
 		
 	}
@@ -44,25 +47,25 @@ public class TheAccelerator extends CustomPlayer{
 	@Override
 	public ArrayList<String> getStartingDeck() {
 		ArrayList<String> retVal = new ArrayList<>();
-		retVal.add(Strike.ID + AcceleratorMod.SUFFIX);
-		retVal.add(Strike.ID + AcceleratorMod.SUFFIX);
-		retVal.add(Strike.ID + AcceleratorMod.SUFFIX);
-		retVal.add(Stream.ID + AcceleratorMod.SUFFIX);
-		retVal.add(Stream.ID + AcceleratorMod.SUFFIX);
-		retVal.add(Defend.ID + AcceleratorMod.SUFFIX);
-		retVal.add(Defend.ID + AcceleratorMod.SUFFIX);
-		retVal.add(Defend.ID + AcceleratorMod.SUFFIX);
-		retVal.add(Defend.ID + AcceleratorMod.SUFFIX);
-		retVal.add(Reverse.ID + AcceleratorMod.SUFFIX);
-		retVal.add(Reverse.ID + AcceleratorMod.SUFFIX);
+		retVal.add(AcceleratorMod.PREFIX + Strike.ID);
+		retVal.add(AcceleratorMod.PREFIX + Strike.ID);
+		retVal.add(AcceleratorMod.PREFIX + Strike.ID);
+		retVal.add(AcceleratorMod.PREFIX + Stream.ID);
+		retVal.add(AcceleratorMod.PREFIX + Stream.ID);
+		retVal.add(AcceleratorMod.PREFIX + Defend.ID);
+		retVal.add(AcceleratorMod.PREFIX + Defend.ID);
+		retVal.add(AcceleratorMod.PREFIX + Defend.ID);
+		retVal.add(AcceleratorMod.PREFIX + Defend.ID);
+		retVal.add(AcceleratorMod.PREFIX + Reverse.ID);
+		retVal.add(AcceleratorMod.PREFIX + Reverse.ID);
 		return retVal;
 	}
 	
 	@Override
 	public ArrayList<String> getStartingRelics() {
 		ArrayList<String> retVal = new ArrayList<>();
-		retVal.add(Cloud.ID + AcceleratorMod.SUFFIX);
-		UnlockTracker.markRelicAsSeen(Cloud.ID + AcceleratorMod.SUFFIX);
+		retVal.add(AcceleratorMod.PREFIX + Cloud.ID);
+		UnlockTracker.markRelicAsSeen(AcceleratorMod.PREFIX + Cloud.ID);
 		return retVal;
 	}
 	

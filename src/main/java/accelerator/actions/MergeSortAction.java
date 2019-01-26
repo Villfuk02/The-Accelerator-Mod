@@ -21,9 +21,9 @@ public class MergeSortAction extends AbstractGameAction{
 	    this.actionType = AbstractGameAction.ActionType.SPECIAL;
 	    triggered = false;
 	    if(Settings.FAST_MODE)
-	    	this.duration = 0.4f;
+	    	this.duration = Settings.ACTION_DUR_FASTER;
 	    else
-	    	this.duration = 1f;
+	    	this.duration = Settings.ACTION_DUR_MED;
 	}
 
 	@Override

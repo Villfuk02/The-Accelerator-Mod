@@ -16,26 +16,11 @@ import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
-import accelerator.cards.Blaze;
-import accelerator.cards.Defend;
-import accelerator.cards.Deflect;
-import accelerator.cards.Friction;
-import accelerator.cards.Intensify;
-import accelerator.cards.Knockback;
-import accelerator.cards.MagneticLink;
-import accelerator.cards.MergeSort;
-import accelerator.cards.NuclearDecay;
-import accelerator.cards.Polarize;
-import accelerator.cards.Propulsion;
-import accelerator.cards.Reverse;
-import accelerator.cards.SafeBoot;
-import accelerator.cards.Stream;
-import accelerator.cards.Strike;
-import accelerator.cards.Threat;
+import accelerator.cards.*;
 import accelerator.character.TheAccelerator;
 import accelerator.patches.AbstractCardEnum;
 import accelerator.patches.TheAcceleratorEnum;
-import accelerator.relics.Cloud;
+import accelerator.relics.*;
 import basemod.BaseMod;
 import basemod.interfaces.PostBattleSubscriber;
 import basemod.interfaces.PostDungeonInitializeSubscriber;
@@ -56,7 +41,7 @@ public class AcceleratorMod implements PostExhaustSubscriber,
     
     private static final Color COLOR = CardHelper.getColor(255F, 100F, 0F);
 
-    public static final String SUFFIX = ":accelerator";
+    public static final String PREFIX = "accelerator:";
     
 	public static final String RESOURCE_PATH = "accelerator/";
 	public static final String IMG_PATH = RESOURCE_PATH + "img/";
@@ -89,9 +74,10 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 	public static final String SHOULDER_1 = CHARACTER_PATH + "shoulder.png";
 	public static final String SHOULDER_2 = CHARACTER_PATH + "shoulder2.png";
 	public static final String CORPSE = CHARACTER_PATH + "corpse.png";
-	public static final String SKELETON_ATLAS = CHARACTER_PATH + "skeleton.atlas";
-	public static final String SKELETON_JSON = CHARACTER_PATH + "skeleton.json";
-	public static final String ANIMATION_PATH = CHARACTER_PATH + "anim/Construct.scml";
+	public static final String SKELETON_ATLAS = CHARACTER_PATH + "idle/skeleton.atlas";
+	public static final String SKELETON_JSON = CHARACTER_PATH + "idle/skeleton.json";
+	
+	public static final String ENERGY_ORB_PATH = CHARACTER_PATH + "orb/";
 	
 	public static final String ORB_TEXTURE_PATH = IMG_PATH + "orbs/";
 	
@@ -174,46 +160,70 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 	public void receiveEditCards() {
 		logger.info("Adding Accelerator Cards");
 		
+		//TOTAL (39)
 		
-		// COLORLESS ()
+			// COLORLESS ()
 		
-		// BASIC (4)
-		BaseMod.addCard(new Defend());
-		BaseMod.addCard(new Strike());
-		BaseMod.addCard(new Stream());
-		BaseMod.addCard(new Reverse());
+			// BASIC (4)
+				BaseMod.addCard(new Defend());
+				BaseMod.addCard(new Strike());
+				BaseMod.addCard(new Stream());
+				BaseMod.addCard(new Reverse());
 		
-		// COMMON (4)
-		//	Attacks (3)
-		BaseMod.addCard(new Propulsion());
-		BaseMod.addCard(new Threat());
-		BaseMod.addCard(new Knockback());
+			// COMMON (8)
+				//	Attacks (4)
+					BaseMod.addCard(new Propulsion());
+					BaseMod.addCard(new Threat());
+					BaseMod.addCard(new Knockback());
+					BaseMod.addCard(new Roast());
 		
-		//	Skills (1)
-		BaseMod.addCard(new Deflect());
+				//	Skills (4)
+					BaseMod.addCard(new Deflect());
+					BaseMod.addCard(new IceSandwich());
+					BaseMod.addCard(new PushOut());
+					BaseMod.addCard(new ClosedSystem());
 		
+			// UNCOMMON (20)
+				// 	Attacks(6)
+					BaseMod.addCard(new Blaze());
+					BaseMod.addCard(new KnockOut());
+					BaseMod.addCard(new Ground());
+					BaseMod.addCard(new DarkMatter());
+					BaseMod.addCard(new Impact());
+					BaseMod.addCard(new NuclearReactor());
 		
-		// UNCOMMON (5)
-		// 	Attacks(1)
-		BaseMod.addCard(new Blaze());
+				//	Skills (11)
+					BaseMod.addCard(new KickStart());
+					BaseMod.addCard(new MagneticLink());
+					BaseMod.addCard(new Polarize());
+					BaseMod.addCard(new Superposition());
+					BaseMod.addCard(new Newtons1());
+					BaseMod.addCard(new Newtons2());
+					BaseMod.addCard(new Newtons3());
+					BaseMod.addCard(new Cooldown());
+					BaseMod.addCard(new Relativity());
+					BaseMod.addCard(new AllignedFields());
+					BaseMod.addCard(new Stabilize());
+					BaseMod.addCard(new Entropy());
 		
-		//	Skills (3)
-		BaseMod.addCard(new SafeBoot());
-		BaseMod.addCard(new MagneticLink());
-		BaseMod.addCard(new Polarize());
+				// 	Powers (3)
+					BaseMod.addCard(new Intensify());
+					BaseMod.addCard(new Demagnetize());
+					BaseMod.addCard(new PerpetuumMobile());
 		
-		// 	Powers (1)
-		BaseMod.addCard(new Intensify());
+			// RARE (7)
+				//	Attacks (1)
+					BaseMod.addCard(new Radiation());
 		
-		// RARE (3)
-		//	Attacks (1)
-		BaseMod.addCard(new NuclearDecay());
+				//	Skills (4)
+					BaseMod.addCard(new MergeSort());
+					BaseMod.addCard(new Spring());
+					BaseMod.addCard(new Acceleration());
+					BaseMod.addCard(new GrowingPotential());
 		
-		//	Skills (1)
-		BaseMod.addCard(new MergeSort());
-		
-		//	Powers (1)
-		BaseMod.addCard(new Friction());
+				//	Powers (2)
+					BaseMod.addCard(new Friction());
+					BaseMod.addCard(new EnergyTransfer());
 		
 	}
 
@@ -221,9 +231,10 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 	public void receiveEditKeywords() {	
 		BaseMod.addKeyword(new String[]{"potential"}, "#yOrb: Increases it's #yPotency every turn and deals #yDamage to the selected enemy when #yEvoked.");
 		BaseMod.addKeyword(new String[]{"kinetic"}, "#yOrb: Loses it's #yPotency every turn and deals #yDamage to the selected enemy when #yEvoked.");
-		BaseMod.addKeyword(new String[]{"magnetic"}, "#yOrb: Increases it's #yPotency every turn. When it's #yEvoked, you gain #yBlock and #yEvoke the next Orb.");
-		BaseMod.addKeyword(new String[]{"thermal"}, "#yOrb: Swaps it's position with the Orb in front of it every turn and deals #yDamage to ALL enemies when #yEvoked.");
-		BaseMod.addKeyword(new String[]{"nuclear"}, "#yOrb: When #yEvoked, Deals #yDamage to a random enemy and #yChannels 2 #yNuclear Orbs with half the Potency. Damage dealt by this Orb is #rNOT considered as Attack damage.");
+		BaseMod.addKeyword(new String[]{"magnetic"}, "#yOrb: Increases it's #yPotency every turn. When it's #yEvoked, you gain #yBlock and if the next Orb is #yMagnetic, #yEvoke it too.");
+		BaseMod.addKeyword(new String[]{"thermal"}, "#yOrb: Every turn, swaps it's position with the Orb in front of it and usually decreases it's #yPotency. Deals #yDamage to ALL enemies when #yEvoked.");
+		BaseMod.addKeyword(new String[]{"nuclear"}, "#yOrb: When #yEvoked, Deals #yDamage to a random enemy and #yChannels 2 #yNuclear Orbs with half the Potency.");
+		BaseMod.addKeyword(new String[]{"merge"}, "Sum the #yPotency of multiple Orbs into one Orb. The new Orb's target and position are based on the rightmost Orb of the Orbs merged.");
 	}
 	
 }

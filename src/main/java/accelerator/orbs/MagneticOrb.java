@@ -2,13 +2,14 @@ package accelerator.orbs;
 
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.defect.EvokeOrbAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.FocusPower;
 
 import accelerator.AcceleratorMod;
+import accelerator.actions.MagneticEvokeAction;
+import accelerator.powers.DemagnetizedPower;
 
 public class MagneticOrb extends CustomOrb {
 public static final String ID = "MagneticOrb";
@@ -46,27 +47,25 @@ public static final String ID = "MagneticOrb";
 	
 	@Override
 	public void evokeEffectUnique() {
-		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, potency));
-		AbstractDungeon.actionManager.addToBottom(new EvokeOrbAction(1));
+		if(!p.hasPower(AcceleratorMod.PREFIX + DemagnetizedPower.NAME))
+			AbstractDungeon.actionManager.addToTop(new MagneticEvokeAction());
+		AbstractDungeon.actionManager.addToTop(new GainBlockAction(p, p, potency));
 	}
 	
 	@Override
 	public int recalculate() {
 		int r = potency;
 		int a = 0;
-		if(AbstractDungeon.player.hasPower(FocusPower.POWER_ID))
-			a = AbstractDungeon.player.getPower(FocusPower.POWER_ID).amount;
-		a += 2;		
-		
-		int b = 0;
 		for(AbstractOrb o : p.orbs) {
 			if(o instanceof MagneticOrb)
-				b++;
+				a++;
 		}		
 		
-		r += a * b;
+		r += a;
 		if(r < 0)
 			r = 0;
+		if(r > 999)
+			r = 999;
 		return r;
 	}
 	

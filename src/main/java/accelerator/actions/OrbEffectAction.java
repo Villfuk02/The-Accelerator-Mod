@@ -17,9 +17,9 @@ public class OrbEffectAction extends AbstractGameAction{
 	    this.orb = orb;
 	    triggered = false;
 	    if(Settings.FAST_MODE)
-	    	this.duration = 0.2f;
+	    	this.duration = Settings.ACTION_DUR_XFAST;
 	    else
-	    	this.duration = 0.5f;
+	    	this.duration = Settings.ACTION_DUR_FAST;
 	}
 
 	@Override

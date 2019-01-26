@@ -32,10 +32,11 @@ public static final String ID = "NuclearOrb";
 	
 	@Override
 	public void evokeEffectUnique() {
-		AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.getRandomMonster(), new DamageInfo(p, potency, DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-		if(potency <= 1) return;
-		AbstractDungeon.actionManager.addToBottom(new ChannelAction(new NuclearOrb(potency/2)));
-		AbstractDungeon.actionManager.addToBottom(new ChannelAction(new NuclearOrb(potency/2)));
+		if(potency > 1) {
+			AbstractDungeon.actionManager.addToTop(new ChannelAction(new NuclearOrb(potency/2)));
+			AbstractDungeon.actionManager.addToTop(new ChannelAction(new NuclearOrb(potency/2)));
+		}
+		AbstractDungeon.actionManager.addToTop(new DamageAction(AbstractDungeon.getRandomMonster(), new DamageInfo(p, potency, DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 	}
 	
 	@Override

@@ -20,11 +20,11 @@ public class Propulsion extends CustomCard{
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int DMG = 7;
+	private static final int DMG = 8;
 	private static final int UPGRADE = 3;
 
 	public Propulsion() {
-		super(ID + AcceleratorMod.SUFFIX, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
+		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
         		AbstractCard.CardType.ATTACK, AbstractCardEnum.ACC,
         		AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ALL_ENEMY);
 		this.baseDamage = DMG;

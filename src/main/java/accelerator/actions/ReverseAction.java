@@ -15,9 +15,9 @@ public class ReverseAction extends AbstractGameAction{
 	    this.actionType = AbstractGameAction.ActionType.SPECIAL;
 	    triggered = false;
 	    if(Settings.FAST_MODE)
-	    	this.duration = 0.2f;
+	    	this.duration = Settings.ACTION_DUR_FASTER;
 	    else
-	    	this.duration = 0.5f;
+	    	this.duration = Settings.ACTION_DUR_MED;
 	}
 
 	@Override

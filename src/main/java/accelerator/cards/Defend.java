@@ -26,7 +26,7 @@ public class Defend extends CustomCard{
 	private static final int UPGRADE = 3;
 
 	public Defend() {
-		super(ID  + AcceleratorMod.SUFFIX, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
+		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
         		AbstractCard.CardType.SKILL, AbstractCardEnum.ACC,
         		AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
 		this.baseBlock = BLOCK;

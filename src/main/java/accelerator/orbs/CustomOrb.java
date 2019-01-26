@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -44,16 +45,20 @@ public abstract class CustomOrb
     public String customDescription;
     
     public int potency = 0;
-	public AbstractMonster target;
+	public AbstractCreature target;
+	public int targetHP = -1;
+	public int targetMAX = -1;
+	
+	
 	private float vfxTimer = 1f;
 	private float vfxIntervalMax = 0.7f;
 	private float vfxIntervalMin = 0.2f;
 	private boolean evokeVFXplayed;
 
 
-    public CustomOrb(String ID, Color inner, Color outer, String IMGURL, int potency, AbstractMonster target) {
+    public CustomOrb(String ID, Color inner, Color outer, String IMGURL, int potency, AbstractCreature target) {
     	
-        this.ID = ID + AcceleratorMod.SUFFIX;
+        this.ID = AcceleratorMod.PREFIX + ID;
         this.orbID = ID;
 
         this.img = ImageMaster.loadImage(IMGURL);
@@ -69,7 +74,12 @@ public abstract class CustomOrb
         this.channelAnimTimer = 0.5F;
         
         this.potency = potency;
+        if(this.potency < 0)
+			this.potency = 0;
+		if(this.potency > 999)
+			this.potency = 999;
         this.target = target;
+        
 
         this.descriptions = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
 
@@ -93,7 +103,9 @@ public abstract class CustomOrb
     	activateEffect();
     }
 
-
+    public void fontScale() {
+    	this.fontScale *= 2;
+    }
 
     
     public void applyFocus() {
@@ -170,7 +182,8 @@ public abstract class CustomOrb
     	sb.setColor(this.c);
         sb.draw(img, this.cX - 48.0F + this.bobEffect.y / 4.0F, this.cY - 48.0F + this.bobEffect.y / 4.0F, 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
         
-        renderText(sb);           
+        renderText(sb);     
+        checkHP();
     }
 
 
@@ -178,17 +191,51 @@ public abstract class CustomOrb
         if (recalculate() != -1) {
 
 
-            float fontOffset = 20 * Settings.scale;
+            float fontOffset = 19 * Settings.scale;
             if (potency > 9) 
-            	fontOffset += (7 * Settings.scale);
-            if (potency > 99) 
-            	fontOffset += (7 * Settings.scale);
-            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(potency), this.cX + this.NUM_X_OFFSET, this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
-            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, "(" + recalculate() + ")", this.cX + this.NUM_X_OFFSET + fontOffset, this.cY + this.NUM_Y_OFFSET - 3F * Settings.scale, Color.LIGHT_GRAY, this.fontScale*0.6f);
+            	fontOffset += (9 * Settings.scale);
+            
+            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(potency), this.cX + this.NUM_X_OFFSET, this.cY + this.NUM_Y_OFFSET, getTargetColor(), this.fontScale);
+            
+            if (recalculate() > 99) 
+            	FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, "(" + recalculate() + ")", this.cX + this.NUM_X_OFFSET, this.cY + this.NUM_Y_OFFSET - 19 * Settings.scale, Color.LIGHT_GRAY, this.fontScale*0.6f);
+            else            
+            	FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, "(" + recalculate() + ")", this.cX + this.NUM_X_OFFSET + fontOffset, this.cY + this.NUM_Y_OFFSET - 3F * Settings.scale, Color.LIGHT_GRAY, this.fontScale*0.6f);
 
         } else {
-            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(potency), this.cX + this.NUM_X_OFFSET, this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
+            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(potency), this.cX + this.NUM_X_OFFSET, this.cY + this.NUM_Y_OFFSET, getTargetColor(), this.fontScale);
         }
+    }
+    
+    public Color getTargetColor() {
+    	if(target == null)
+    		return Color.WHITE;
+    	if(target instanceof AbstractPlayer)
+    		return Color.RED;
+    	return Color.GOLD;
+    }
+    
+    public String getTargetDescription() {
+    	if(target == null)
+    		return "#ra #rrandom #renemy";
+    	if(target instanceof AbstractPlayer)
+    		return "#rYOU";    	
+    	return "#r" + target.name.replace(" ", " #r") + " #r(" + targetHP + "/" + targetMAX +")";
+    }
+    
+    public void checkHP() {
+    	if(target == null || target.isDeadOrEscaped())
+    		return;
+    	if(target instanceof AbstractPlayer)
+    		return;
+    	if(target != null && targetHP != target.currentHealth) {
+    		targetHP = target.currentHealth;
+    		updateDescription();
+    	}
+    	if(target != null && targetMAX != target.maxHealth) {
+    		targetMAX = target.maxHealth;    		 
+    		updateDescription();
+    	}
     }
 }
 
