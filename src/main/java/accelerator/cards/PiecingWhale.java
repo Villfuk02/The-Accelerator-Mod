@@ -50,8 +50,8 @@ public class PiecingWhale extends CustomCard{
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {		
-		AbstractDungeon.actionManager.addToBottom(new ChannelAction(new PotentialOrb(this.damage, m)));
 		for(AbstractMonster mo : AbstractDungeon.getMonsters().monsters)
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new PiecingWhalePower(mo, this.magicNumber), this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new ChannelAction(new PotentialOrb(this.damage, m)));
 	}
 }

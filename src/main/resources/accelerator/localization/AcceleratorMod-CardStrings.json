@@ -215,10 +215,19 @@
 	},
 	"PiecingWhale": {
 		"NAME": "Piecing Whale",
-		"DESCRIPTION": "Apply !M! Piecing to ALL enemies. NL Channel a Potential Orb with !D! Potency. NL Exhaust."
+		"DESCRIPTION": "Channel a Potential Orb with !D! Potency. NL Apply !M! Piecing to ALL enemies. NL Exhaust."
 	},
 	"Efficiency": {
 		"NAME": "Efficiency",
 		"DESCRIPTION": "Every time an Orb loses Potency, gain !M! times as much Block."
+	},
+	"Pull": {
+		"NAME": "Pull",
+		"DESCRIPTION": "Channel a Magnetic Orb with !B! Potency. NL Draw !M! card.",
+		"UPGRADE_DESCRIPTION": "Channel a Magnetic Orb with !B! Potency. NL Draw !M! cards."
+	},
+	"Engine": {
+		"NAME": "Engine",
+		"DESCRIPTION": "Channel a Kinetic Orb with !D! Potency and randomly chosen target X times."
 	}
 }

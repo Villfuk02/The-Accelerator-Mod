@@ -10,43 +10,47 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import accelerator.AcceleratorMod;
-import accelerator.orbs.ThermalOrb;
+import accelerator.orbs.MagneticOrb;
 import accelerator.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
-public class Propulsion extends CustomCard{
-	public static final String ID = "Propulsion";
+public class Pull extends CustomCard{
+	public static final String ID = "Pull";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String UP_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 1;
-	private static final int DMG = 6;
-	private static final int UPGRADE = 3;
+	private static final int BLOCK = 7;
+	private static final int MAGIC = 1;
 
-	public Propulsion() {
+	public Pull() {
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
-        		AbstractCard.CardType.ATTACK, AbstractCardEnum.ACC,
-        		AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ALL_ENEMY);
-		this.baseDamage = DMG;
+        		AbstractCard.CardType.SKILL, AbstractCardEnum.ACC,
+        		AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
+		this.magicNumber = this.baseMagicNumber = MAGIC;
+		this.baseBlock = BLOCK;
 	}
 
 	@Override
 	public AbstractCard makeCopy() {
-		return new Propulsion();
+		return new Pull();
 	}
 
 	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.upgradeDamage(UPGRADE);
+			this.upgradeMagicNumber(1);
+			this.rawDescription = UP_DESCRIPTION;
+			this.initializeDescription();
 			
 		} 
-	}
+	}	
 
 	@Override
-	public void use(AbstractPlayer p, AbstractMonster m) {		
-		AbstractDungeon.actionManager.addToBottom(new ChannelAction(new ThermalOrb(this.damage)));
-		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+	public void use(AbstractPlayer p, AbstractMonster m) {
+		AbstractDungeon.actionManager.addToBottom(new ChannelAction(new MagneticOrb(this.block))); 
+		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber)); 
 	}
 }
