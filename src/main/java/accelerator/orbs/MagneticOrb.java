@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.FocusPower;
 
 import accelerator.AcceleratorMod;
+import accelerator.actions.ChangePotencyAction;
 import accelerator.actions.MagneticEvokeAction;
 import accelerator.powers.DemagnetizedPower;
 
@@ -38,8 +39,7 @@ public static final String ID = "MagneticOrb";
 		
 		CardCrawlGame.sound.play("POWER_FOCUS", 0.1F);
 		
-		this.potency = recalculate();		
-		this.fontScale *= 2f;
+		AbstractDungeon.actionManager.addToTop(new ChangePotencyAction(this, recalculate() - potency));	
 		
 		updateDescription();
 	
@@ -48,7 +48,7 @@ public static final String ID = "MagneticOrb";
 	@Override
 	public void evokeEffectUnique() {
 		if(!p.hasPower(AcceleratorMod.PREFIX + DemagnetizedPower.NAME))
-			AbstractDungeon.actionManager.addToTop(new MagneticEvokeAction());
+			AbstractDungeon.actionManager.addToTop(new MagneticEvokeAction(this));
 		AbstractDungeon.actionManager.addToTop(new GainBlockAction(p, p, potency));
 	}
 	

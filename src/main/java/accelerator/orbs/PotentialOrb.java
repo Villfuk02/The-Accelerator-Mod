@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.FocusPower;
 
 import accelerator.AcceleratorMod;
+import accelerator.actions.ChangePotencyAction;
 
 public class PotentialOrb extends CustomOrb {
 public static final String ID = "PotentialOrb";
@@ -44,8 +45,7 @@ public static final String ID = "PotentialOrb";
 		
 		CardCrawlGame.sound.play("POWER_FOCUS", 0.1F);
 		
-		this.potency = recalculate();
-		this.fontScale *= 2f;
+		AbstractDungeon.actionManager.addToTop(new ChangePotencyAction(this, recalculate() - potency));
 		
 		updateDescription();
 	

@@ -46,6 +46,8 @@ public class Entropy extends CustomCard{
         		potency += ((CustomOrb) o).potency;
         	}
         }	    	
+    	if(count <= 0)
+    		return;
     	potency = (potency+count-1)/count;
         this.rawDescription = getDesc() + EXTENDED_DESCRIPTION[0] + potency + EXTENDED_DESCRIPTION[1];        
         this.initializeDescription();

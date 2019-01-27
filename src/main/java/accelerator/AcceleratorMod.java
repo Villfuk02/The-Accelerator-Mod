@@ -160,7 +160,7 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 	public void receiveEditCards() {
 		logger.info("Adding Accelerator Cards");
 		
-		//TOTAL (39)
+		//TOTAL (49)
 		
 			// COLORLESS ()
 		
@@ -170,29 +170,34 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 				BaseMod.addCard(new Stream());
 				BaseMod.addCard(new Reverse());
 		
-			// COMMON (8)
-				//	Attacks (4)
+			// COMMON (11)
+				//	Attacks (6)
 					BaseMod.addCard(new Propulsion());
 					BaseMod.addCard(new Threat());
 					BaseMod.addCard(new Knockback());
 					BaseMod.addCard(new Roast());
+					BaseMod.addCard(new DoubleSlit());
+					BaseMod.addCard(new Jet());
 		
-				//	Skills (4)
+				//	Skills (5)
 					BaseMod.addCard(new Deflect());
 					BaseMod.addCard(new IceSandwich());
 					BaseMod.addCard(new PushOut());
 					BaseMod.addCard(new ClosedSystem());
+					BaseMod.addCard(new Search());
 		
-			// UNCOMMON (20)
-				// 	Attacks(6)
+			// UNCOMMON (24)
+				// 	Attacks(8)
 					BaseMod.addCard(new Blaze());
 					BaseMod.addCard(new KnockOut());
 					BaseMod.addCard(new Ground());
 					BaseMod.addCard(new DarkMatter());
 					BaseMod.addCard(new Impact());
 					BaseMod.addCard(new NuclearReactor());
+					BaseMod.addCard(new Blizzare());
+					BaseMod.addCard(new PiecingWhale());
 		
-				//	Skills (11)
+				//	Skills (13)
 					BaseMod.addCard(new KickStart());
 					BaseMod.addCard(new MagneticLink());
 					BaseMod.addCard(new Polarize());
@@ -205,25 +210,29 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new AllignedFields());
 					BaseMod.addCard(new Stabilize());
 					BaseMod.addCard(new Entropy());
+					BaseMod.addCard(new Research());
 		
 				// 	Powers (3)
 					BaseMod.addCard(new Intensify());
 					BaseMod.addCard(new Demagnetize());
 					BaseMod.addCard(new PerpetuumMobile());
 		
-			// RARE (7)
+			// RARE (10)
 				//	Attacks (1)
 					BaseMod.addCard(new Radiation());
 		
-				//	Skills (4)
+				//	Skills (5)
 					BaseMod.addCard(new MergeSort());
 					BaseMod.addCard(new Spring());
 					BaseMod.addCard(new Acceleration());
 					BaseMod.addCard(new GrowingPotential());
+					BaseMod.addCard(new Investigation());
 		
-				//	Powers (2)
+				//	Powers (4)
 					BaseMod.addCard(new Friction());
 					BaseMod.addCard(new EnergyTransfer());
+					BaseMod.addCard(new Dynamo());
+					BaseMod.addCard(new Efficiency());
 		
 	}
 
@@ -235,6 +244,7 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 		BaseMod.addKeyword(new String[]{"thermal"}, "#yOrb: Every turn, swaps it's position with the Orb in front of it and usually decreases it's #yPotency. Deals #yDamage to ALL enemies when #yEvoked.");
 		BaseMod.addKeyword(new String[]{"nuclear"}, "#yOrb: When #yEvoked, Deals #yDamage to a random enemy and #yChannels 2 #yNuclear Orbs with half the Potency.");
 		BaseMod.addKeyword(new String[]{"merge"}, "Sum the #yPotency of multiple Orbs into one Orb. The new Orb's target and position are based on the rightmost Orb of the Orbs merged.");
+		BaseMod.addKeyword(new String[]{"piecing"}, "If you kill this enemy, heal HP and gain gold. Amount decreases at the end of every turn.");
 	}
 	
 }

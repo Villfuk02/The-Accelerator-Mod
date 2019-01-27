@@ -87,7 +87,7 @@
 	},
 	"Superposition": {
 		"NAME": "Superposition",
-		"DESCRIPTION": "Evoke the next orb !M! times without removing it. NL Decrease it's Potency by 5."
+		"DESCRIPTION": "Evoke the next orb NL !M! times without removing it. NL Decrease it's Potency by 5."
 	},
 	"Acceleration": {
 		"NAME": "Acceleration",
@@ -143,7 +143,7 @@
 	},
 	"Relativity": {
 		"NAME": "Relativity",
-		"DESCRIPTION": "Reduce the Potency of ALL your Orbs by 3. NL ALL enemies lose !M! Strength for this turn."
+		"DESCRIPTION": "Reduce the Potency of ALL your Orbs by 2. NL ALL enemies lose !M! Strength for this turn."
 	},
 	"ClosedSystem": {
 		"NAME": "Closed System",
@@ -180,5 +180,45 @@
             " NL (Sets the Potency of all Orbs to ",
             ")"
         ]
+	},
+	"Dynamo": {
+		"NAME": "Dynamo",
+		"DESCRIPTION": "Gain [E] for every 4 Orbs you Evoke."
+	},
+	"DoubleSlit": {
+		"NAME": "Double Slit",
+		"DESCRIPTION": "Channel a Potential Orb with !D! Potency and randomly chosen target twice."
+	},
+	"Jet": {
+		"NAME": "Jet",
+		"DESCRIPTION": "Channel !M! Kinetic Orbs with !D! Potency."
+	},
+	"Search": {
+		"NAME": "Search",
+		"DESCRIPTION": "Draw 3 cards.",
+		"UPGRADE_DESCRIPTION": "Retain. NL Draw 3 cards."
+	},
+	"Research": {
+		"NAME": "Research",
+		"DESCRIPTION": "Draw cards until you draw a Skill or your draw pile is empty. NL Draw !M! card.",
+		"UPGRADE_DESCRIPTION": "Draw cards until you draw a Skill or your draw pile is empty. NL Draw !M! cards."
+	},
+	"Investigation": {
+		"NAME": "Investigation",
+		"DESCRIPTION": "Draw cards until you draw 2 cards which cost 0 energy or your hand is full.",
+		"UPGRADE_DESCRIPTION": "Retain. NL Draw cards until you draw 2 cards which cost 0 energy or your hand is full."
+	},
+	"Blizzare": {
+		"NAME": "Blizzare",
+		"DESCRIPTION": "Channel a Nuclear Orb with !M! Potency. NL (4 Damage in total) NL Channel 1 Frost.",
+		"UPGRADE_DESCRIPTION": "Channel a Nuclear Orb with !M! Potency. NL (5 Damage in total) NL Channel 1 Frost."
+	},
+	"PiecingWhale": {
+		"NAME": "Piecing Whale",
+		"DESCRIPTION": "Apply !M! Piecing to ALL enemies. NL Channel a Potential Orb with !D! Potency. NL Exhaust."
+	},
+	"Efficiency": {
+		"NAME": "Efficiency",
+		"DESCRIPTION": "Every time an Orb loses Potency, gain !M! times as much Block."
 	}
 }

@@ -32,7 +32,9 @@ public class EntropyAction extends AbstractGameAction{
 	        		count++;
 	        		potency += ((CustomOrb) o).potency;
 	        	}
-	        }	    	
+	        }	   
+	    	if(count <= 0)
+	    		return;
 	    	potency = (potency+count-1)/count;
 	    	for(AbstractOrb o : AbstractDungeon.player.orbs) {
 	        	if(o instanceof CustomOrb) {
