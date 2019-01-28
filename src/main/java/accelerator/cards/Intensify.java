@@ -19,8 +19,8 @@ public class Intensify extends CustomCard{
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 2;
-	private static final int UP = 1;
+	public static final String UP_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+	private static final int COST = 1;
 
 	public Intensify() {
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
@@ -36,8 +36,10 @@ public class Intensify extends CustomCard{
 	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
-			upgradeName();	
-			this.upgradeBaseCost(UP);
+			upgradeName();
+			this.isInnate = true;
+			this.rawDescription = UP_DESCRIPTION;
+			initializeDescription();
 		} 
 	}
 

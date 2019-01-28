@@ -19,7 +19,7 @@ public class Stream extends CustomCard{
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int DMG = 5;
+	private static final int DMG = 4;
 	private static final int UPGRADE = 1;
 
 	public Stream() {

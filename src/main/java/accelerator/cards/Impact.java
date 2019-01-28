@@ -21,7 +21,7 @@ public class Impact extends CustomCard{
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 4;
-	private static final int DMG = 8;
+	private static final int DMG = 14;
 
 	public Impact() {
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,

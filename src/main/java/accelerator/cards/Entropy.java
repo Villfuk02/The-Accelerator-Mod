@@ -19,7 +19,6 @@ public class Entropy extends CustomCard{
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String UP_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 	private static final int COST = 0;
 
@@ -27,7 +26,7 @@ public class Entropy extends CustomCard{
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
         		AbstractCard.CardType.SKILL, AbstractCardEnum.ACC,
         		AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
-		this.exhaust = true;
+		this.magicNumber = this.baseMagicNumber = 1;
 	}
 
 	@Override
@@ -48,14 +47,13 @@ public class Entropy extends CustomCard{
         }	    	
     	if(count <= 0)
     		return;
-    	potency = (potency+count-1)/count;
+    	potency = potency/count;
+    	potency += magicNumber;
         this.rawDescription = getDesc() + EXTENDED_DESCRIPTION[0] + potency + EXTENDED_DESCRIPTION[1];        
         this.initializeDescription();
     }
 	
 	private String getDesc() {
-		if(upgraded)
-			return UP_DESCRIPTION;
 		return DESCRIPTION;
 	}
 
@@ -63,14 +61,12 @@ public class Entropy extends CustomCard{
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.rawDescription = UP_DESCRIPTION;
-			this.exhaust = false;
-			initializeDescription();
+			this.upgradeMagicNumber(1);
 		} 
 	}
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {	
-		AbstractDungeon.actionManager.addToBottom(new EntropyAction());
+		AbstractDungeon.actionManager.addToBottom(new EntropyAction(this.magicNumber));
 	}
 }

@@ -1,6 +1,5 @@
 package accelerator.cards;
 
-import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,7 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import accelerator.AcceleratorMod;
-import accelerator.orbs.KineticOrb;
+import accelerator.actions.EngineAction;
 import accelerator.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
@@ -20,7 +19,7 @@ public class Engine extends CustomCard{
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = -1;
-	private static final int DMG = 12;
+	private static final int DMG = 10;
 	private static final int UPGRADE = 3;
 
 	public Engine() {
@@ -46,22 +45,9 @@ public class Engine extends CustomCard{
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {	
-		int effect = EnergyPanel.totalCount;
 		if (this.energyOnUse < EnergyPanel.totalCount) {
             this.energyOnUse = EnergyPanel.totalCount;
         }
-		if (this.energyOnUse != -1) {
-            effect = this.energyOnUse;
-        }
-		if (p.hasRelic("Chemical X")) {
-	        effect += 2;
-	        p.getRelic("Chemical X").flash();
-	    }
-		if (effect > 0) {
-			for(int i = 0; i < effect; i++)
-				AbstractDungeon.actionManager.addToBottom(new ChannelAction(new KineticOrb(this.damage, AbstractDungeon.getRandomMonster())));
-			if (!this.freeToPlayOnce)
-                p.energy.use(EnergyPanel.totalCount);
-        }
+		AbstractDungeon.actionManager.addToBottom(new EngineAction(p, damage, freeToPlayOnce, energyOnUse));
 	}
 }

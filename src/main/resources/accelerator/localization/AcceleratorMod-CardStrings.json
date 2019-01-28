@@ -35,7 +35,8 @@
 	},
 	"Intensify": {
 		"NAME": "Intensify",
-		"DESCRIPTION": "Gain 2 Orb slots. NL Gain 1 Focus."
+		"DESCRIPTION": "Gain 2 Orb slots. NL Gain 1 Focus.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Gain 2 Orb slots. NL Gain 1 Focus."
 	},
 	"MagneticLink": {
 		"NAME": "Magnetic Link",
@@ -174,8 +175,7 @@
 	},
 	"Entropy": {
 		"NAME": "Entropy",
-		"DESCRIPTION": "Average the potency of all your Orbs (Rounded up). NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Average the potency of all your Orbs (Rounded up).",
+		"DESCRIPTION": "Set the Potency of all your Orbs to NL their average + !M!.",
         "EXTENDED_DESCRIPTION":[
             " NL (Sets the Potency of all Orbs to ",
             ")"
@@ -229,5 +229,9 @@
 	"Engine": {
 		"NAME": "Engine",
 		"DESCRIPTION": "Channel a Kinetic Orb with !D! Potency and randomly chosen target X times."
+	},
+	"Streamline": {
+		"NAME": "Streamline",
+		"DESCRIPTION": "Lose 1 Orb slot. NL Gain !M! Strength."
 	}
 }

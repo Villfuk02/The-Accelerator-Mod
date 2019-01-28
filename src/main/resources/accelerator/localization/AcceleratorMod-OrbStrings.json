@@ -2,19 +2,19 @@
   "PotentialOrb": {
     "NAME": "Potential Orb",
     "DESCRIPTION": [
-      "At the start of every turn, increases it's #yPotency by #b",
+      "At the start of every turn, increases it's #yPotency by #g",
       "% (rounded up). Deals #b",
       " #yDamage to ",
-      " when #yEvoked."
+      " when #yEvoked. NL Value shown in #gGreen is affected by #yFocus."
     ]
   },
   "KineticOrb": {
     "NAME": "Kinetic Orb",
     "DESCRIPTION": [
-      "At the start of every turn, decreases it's #yPotency by #b1/",
+      "At the start of every turn, decreases it's #yPotency by #g1/",
       " (rounded up). Deals #b",
       " #yDamage to ",
-      " when #yEvoked.",
+      " when #yEvoked. NL Value shown in #gGreen is affected by #yFocus.",
       "At the start of every turn, decreases it's #yPotency to #r0. Deals #b"
     ]
   },
@@ -29,9 +29,9 @@
   "ThermalOrb": {
     "NAME": "Thermal Orb",
     "DESCRIPTION": [
-      "At the start of every turn, swaps it's position with the orb in front of it. If it was another #yThermal Orb, increase Potency by #b",
+      "At the start of every turn, swaps it's position with the orb in front of it. If it was another #yThermal Orb, increase Potency by #g",
       ", otherwise decrease it by #b1. Deals #b",
-      " #yDamage to #rALL #renemies when #yEvoked."
+      " #yDamage to #rALL #renemies when #yEvoked. NL Value shown in #gGreen is affected by #yFocus."
     ]
   },
   "NuclearOrb": {

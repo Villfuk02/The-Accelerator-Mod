@@ -10,10 +10,12 @@ import accelerator.orbs.CustomOrb;
 public class EntropyAction extends AbstractGameAction{
 
 	boolean triggered = false;
+	int increase= 0;
 	
-	public EntropyAction() {
+	public EntropyAction(int inc) {
 	    this.actionType = AbstractGameAction.ActionType.SPECIAL;
 	    triggered = false;
+	    increase = inc;
 	    if(Settings.FAST_MODE)
 	    	this.duration = Settings.ACTION_DUR_FASTER;
 	    else
@@ -35,7 +37,9 @@ public class EntropyAction extends AbstractGameAction{
 	        }	   
 	    	if(count <= 0)
 	    		return;
-	    	potency = (potency+count-1)/count;
+
+	    	potency = potency/count;
+	    	potency += increase;
 	    	for(AbstractOrb o : AbstractDungeon.player.orbs) {
 	        	if(o instanceof CustomOrb) {
 	        		AbstractDungeon.actionManager.addToBottom(new ChangePotencyAction(o, potency - ((CustomOrb)o).potency));
