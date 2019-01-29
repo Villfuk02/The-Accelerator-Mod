@@ -18,13 +18,14 @@ public class Acceleration extends CustomCard{
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 1;
-	private static final int UPGRADE = 0;
+	private static final int COST = 2;
+	private static final int MAGIC = 2;
 
 	public Acceleration() {
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
         		AbstractCard.CardType.SKILL, AbstractCardEnum.ACC,
         		AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
+		this.magicNumber = this.baseMagicNumber = MAGIC;
 	}
 
 	@Override
@@ -36,14 +37,15 @@ public class Acceleration extends CustomCard{
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.upgradeBaseCost(UPGRADE);
+			this.upgradeMagicNumber(1);
 		} 
 	}
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		for(AbstractOrb o : p.orbs) {
-			AbstractDungeon.actionManager.addToBottom(new PassiveOrbAction(o));
-		}
+		for(int i = 0; i < this.magicNumber; i++)
+			for(AbstractOrb o : p.orbs)
+				AbstractDungeon.actionManager.addToBottom(new PassiveOrbAction(o));
+		
 	}
 }

@@ -44,7 +44,7 @@ public class InvestigationAction extends AbstractGameAction{
 	    		return;
 	        }
 	    	if (AbstractDungeon.player.gameHandSize >= BaseMod.MAX_HAND_SIZE) {	    		
-	    		triggered = true;
+	    		this.isDone = true;
 	    		return;
 	        }
 	    	

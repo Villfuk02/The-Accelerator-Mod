@@ -6,7 +6,7 @@
     <!-- Change These to match your mod -->
     <groupId>StsMod</groupId>
     <artifactId>TheAccelerator</artifactId>
-    <version>0.1.3</version>
+    <version>0.1.4</version>
     <packaging>jar</packaging>
     <name>TheAccelerator</name>
     <description>Slay the Spire mod</description>

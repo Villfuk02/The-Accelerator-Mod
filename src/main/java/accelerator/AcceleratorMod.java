@@ -160,7 +160,7 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 	public void receiveEditCards() {
 		logger.info("Adding Accelerator Cards");
 		
-		//TOTAL (52)
+		//TOTAL (58)
 		
 			// COLORLESS ()
 		
@@ -170,7 +170,7 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 				BaseMod.addCard(new Stream());
 				BaseMod.addCard(new Reverse());
 		
-			// COMMON (12)
+			// COMMON (13)
 				//	Attacks (6)
 					BaseMod.addCard(new Propulsion());
 					BaseMod.addCard(new Threat());
@@ -179,16 +179,17 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new DoubleSlit());
 					BaseMod.addCard(new Jet());
 		
-				//	Skills (6)
+				//	Skills (7)
 					BaseMod.addCard(new Deflect());
 					BaseMod.addCard(new IceSandwich());
 					BaseMod.addCard(new PushOut());
 					BaseMod.addCard(new ClosedSystem());
 					BaseMod.addCard(new Search());
 					BaseMod.addCard(new Pull());
+					BaseMod.addCard(new Exchange());
 		
-			// UNCOMMON (25)
-				// 	Attacks(8)
+			// UNCOMMON (27)
+				// 	Attacks(9)
 					BaseMod.addCard(new Blaze());
 					BaseMod.addCard(new KnockOut());
 					BaseMod.addCard(new Ground());
@@ -197,6 +198,7 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new NuclearReactor());
 					BaseMod.addCard(new Blizzare());
 					BaseMod.addCard(new PiecingWhale());
+					BaseMod.addCard(new Fragmentation());
 		
 				//	Skills (13)
 					BaseMod.addCard(new KickStart());
@@ -213,16 +215,19 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new Entropy());
 					BaseMod.addCard(new Research());
 		
-				// 	Powers (4)
+				// 	Powers (5)
 					BaseMod.addCard(new Intensify());
 					BaseMod.addCard(new Demagnetize());
 					BaseMod.addCard(new PerpetuumMobile());
 					BaseMod.addCard(new Streamline());
+					BaseMod.addCard(new MobiusLoop());
 		
-			// RARE (11)
-				//	Attacks (2)
+			// RARE (14)
+				//	Attacks (4)
 					BaseMod.addCard(new Radiation());
 					BaseMod.addCard(new Engine());
+					BaseMod.addCard(new Drain());
+					BaseMod.addCard(new BlackHole());
 		
 				//	Skills (5)
 					BaseMod.addCard(new MergeSort());
@@ -231,11 +236,12 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new GrowingPotential());
 					BaseMod.addCard(new Investigation());
 		
-				//	Powers (4)
+				//	Powers (5)
 					BaseMod.addCard(new Friction());
 					BaseMod.addCard(new EnergyTransfer());
 					BaseMod.addCard(new Dynamo());
 					BaseMod.addCard(new Efficiency());
+					BaseMod.addCard(new Spin());
 		
 	}
 

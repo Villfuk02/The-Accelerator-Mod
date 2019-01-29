@@ -88,15 +88,15 @@
 	},
 	"Superposition": {
 		"NAME": "Superposition",
-		"DESCRIPTION": "Evoke the next orb NL !M! times without removing it. NL Decrease it's Potency by 5."
+		"DESCRIPTION": "Evoke the next orb NL !M! times."
 	},
 	"Acceleration": {
 		"NAME": "Acceleration",
-		"DESCRIPTION": "Trigger the passive ability of ALL your Orbs."
+		"DESCRIPTION": "Trigger the passive ability of ALL your Orbs !M! times."
 	},
 	"Demagnetize": {
 		"NAME": "Demagnetize",
-		"DESCRIPTION": "Magnetic Orbs no longer Evoke other Magnetic Orbs. NL Gain 2 Dexterity."
+		"DESCRIPTION": "Magnetic Orbs no longer Evoke other Magnetic Orbs. NL Gain !M! Dexterity."
 	},
 	"Newtons1": {
 		"NAME": "Newton's 1st Law",
@@ -233,5 +233,30 @@
 	"Streamline": {
 		"NAME": "Streamline",
 		"DESCRIPTION": "Lose 1 Orb slot. NL Gain !M! Strength."
+	},
+	"MobiusLoop": {
+		"NAME": "Möbius Loop",
+		"DESCRIPTION": "At the start of your turn, trigger the passive ability of your leftmost Orb !M! times."
+	},
+	"Spin": {
+		"NAME": "Spin",
+		"DESCRIPTION": "Every time you play a Skill, draw 1 card."
+	},
+	"Fragmentation": {
+		"NAME": "Fragmentation",
+		"DESCRIPTION": "Deal !D! damage and Gain !B! Block for every Magnetic Orb you have."
+	},
+	"BlackHole": {
+		"NAME": "Black Hole",
+		"DESCRIPTION": "Channel a Potential Orb with !D! Potency. NL Exhaust. NL Can be upgraded any number of times."
+	},
+	"Drain": {
+		"NAME": "Drain",
+		"DESCRIPTION": "Deal damage equal to !M! % of your most potent Potential Orb's Potency. NL Decrease its Potency by 3."
+	},
+	"Exchange": {
+		"NAME": "Exchange",
+		"DESCRIPTION": "Channel a Magnetic Orb with !B! Potency. NL Discard random card. NL Put a card from your discard pile into your hand.",
+		"UPGRADE_DESCRIPTION": "Channel a Magnetic Orb with !B! Potency. NL Discard 1 card. NL Put a card from your discard pile into your hand."
 	}
 }
