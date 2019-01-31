@@ -88,7 +88,7 @@
 	},
 	"Superposition": {
 		"NAME": "Superposition",
-		"DESCRIPTION": "Evoke the next orb NL !M! times."
+		"DESCRIPTION": "Evoke the next orb NL !M! times. NL Exhaust."
 	},
 	"Acceleration": {
 		"NAME": "Acceleration",
@@ -258,5 +258,10 @@
 		"NAME": "Exchange",
 		"DESCRIPTION": "Channel a Magnetic Orb with !B! Potency. NL Discard random card. NL Put a card from your discard pile into your hand.",
 		"UPGRADE_DESCRIPTION": "Channel a Magnetic Orb with !B! Potency. NL Discard 1 card. NL Put a card from your discard pile into your hand."
+	},
+	"Wormhole": {
+		"NAME": "Wormhole",
+		"DESCRIPTION": "Choose a new target for ALL currently Channeled Potential Orbs.",
+		"UPGRADE_DESCRIPTION": "Choose a new target for ALL currently Channeled Kinetic and Potential Orbs."
 	}
 }

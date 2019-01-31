@@ -72,7 +72,7 @@ public class TheAccelerator extends CustomPlayer{
 	@Override
 	public CharSelectInfo getLoadout() {
 		return new CharSelectInfo(NAME, "Yeah, I meant the #rreal one. NL This one's got the power of the #gOctahedron #gof #gTranscendence.",
-				100, 100, 4, 99, 5,
+				75, 75, 4, 99, 5,
 			this, getStartingRelics(), getStartingDeck(), false);
 	}
 

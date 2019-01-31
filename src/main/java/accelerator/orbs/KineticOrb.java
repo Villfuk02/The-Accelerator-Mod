@@ -39,7 +39,7 @@ public static final String ID = "KineticOrb";
 		a += 2;
 		a *= 5;
 		
-		this.description = (a>0? this.descriptions[0] + a + this.descriptions[1]: this.descriptions[5]) + potency + this.descriptions[2] + getTargetDescription() + this.descriptions[3];
+		this.description = (a>0? this.descriptions[0] + a + this.descriptions[1]: this.descriptions[4]) + potency + this.descriptions[2] + getTargetDescription() + this.descriptions[3];
 		}
 	
 	@Override

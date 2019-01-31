@@ -34,16 +34,18 @@ public class InvestigationAction extends AbstractGameAction{
 	    if (this.isDone) return;
 	    this.tickDuration();
 	    if(!triggered) {
+	    	
+	    	if (AbstractDungeon.player.hand.size() >= BaseMod.MAX_HAND_SIZE) {	    		
+	    		this.isDone = true;
+	    		return;
+	        }
+	    	
 	    	if (AbstractDungeon.player.drawPile.isEmpty()) {
 	    		if (AbstractDungeon.player.discardPile.size() > 0) {
 	    			AbstractDungeon.actionManager.addToTop(new InvestigationAction());
 	                AbstractDungeon.actionManager.addToTop(new ShuffleAction(AbstractDungeon.player.drawPile, false));
 	                AbstractDungeon.actionManager.addToTop(new EmptyDeckShuffleAction());
 	            }
-	    		this.isDone = true;
-	    		return;
-	        }
-	    	if (AbstractDungeon.player.gameHandSize >= BaseMod.MAX_HAND_SIZE) {	    		
 	    		this.isDone = true;
 	    		return;
 	        }

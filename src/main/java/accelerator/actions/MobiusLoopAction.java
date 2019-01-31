@@ -24,6 +24,10 @@ public class MobiusLoopAction extends AbstractGameAction{
 	    if (this.isDone) return;
 	    this.tickDuration();
 	    if(!triggered) {
+	    	if(AbstractDungeon.player.filledOrbCount() < 1) {
+	    		this.isDone = true;
+	    		return;
+	    	}
 	    	AbstractOrb o = AbstractDungeon.player.orbs.get(AbstractDungeon.player.filledOrbCount()-1);
 	    	for(int i = 0; i < amount; i++)
 	        	AbstractDungeon.actionManager.addToBottom(new PassiveOrbAction(o));

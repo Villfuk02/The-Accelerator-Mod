@@ -29,6 +29,7 @@ public class OrbEffectAction extends AbstractGameAction{
 	    if(!triggered) {
 	    	orb.activateEffectUnique();
             AbstractDungeon.effectsQueue.add(new OrbFlareEffect(orb, orb.inner, orb.outer));
+        	AbstractDungeon.player.hand.applyPowers();
 	    	triggered = true;	
 	    }
 		

@@ -27,6 +27,7 @@ public class Superposition extends CustomCard{
         		AbstractCard.CardType.SKILL, AbstractCardEnum.ACC,
         		AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 		this.baseMagicNumber = this.magicNumber = MAGIC;
+		this.exhaust = true;
 	}
 
 	@Override

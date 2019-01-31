@@ -31,6 +31,7 @@ public class PassiveOrbAction extends AbstractGameAction{
 	    	if(orb instanceof CustomOrb) {
 	    		((CustomOrb) orb).activateEffectUnique();
 	    		AbstractDungeon.effectsQueue.add(new OrbFlareEffect(orb, ((CustomOrb) orb).inner, ((CustomOrb) orb).outer));
+	        	AbstractDungeon.player.hand.applyPowers();
             }else {
             	orb.onStartOfTurn();
             	orb.onEndOfTurn();

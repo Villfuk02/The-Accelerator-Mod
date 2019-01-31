@@ -133,7 +133,7 @@ public abstract class CustomOrb
     }
 
 
-    public void activateEffect() {        
+    public void activateEffect() {
     	AbstractDungeon.actionManager.addToBottom(new OrbEffectAction(this));
     }
 
@@ -179,8 +179,10 @@ public abstract class CustomOrb
 
     public void render(SpriteBatch sb) {
 
+    	float size = Settings.scale * 96.0f;
+    	
     	sb.setColor(this.c);
-        sb.draw(img, this.cX - 48.0F + this.bobEffect.y / 4.0F, this.cY - 48.0F + this.bobEffect.y / 4.0F, 48.0F, 48.0F, 96.0F, 96.0F, this.scale, this.scale, 0.0F, 0, 0, 96, 96, false, false);
+        sb.draw(img, this.cX - size/2 + this.bobEffect.y / 4.0F, this.cY - size/2 + this.bobEffect.y / 4.0F, size, size);
         
         renderText(sb);     
         checkHP();
