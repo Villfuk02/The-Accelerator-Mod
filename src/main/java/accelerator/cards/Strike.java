@@ -18,7 +18,7 @@ import basemod.abstracts.CustomCard;
 
 public class Strike extends CustomCard{
 	public static final String ID = "Strike";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(AcceleratorMod.PREFIX + ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;

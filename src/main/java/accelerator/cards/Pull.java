@@ -16,7 +16,7 @@ import basemod.abstracts.CustomCard;
 
 public class Pull extends CustomCard{
 	public static final String ID = "Pull";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(AcceleratorMod.PREFIX + ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UP_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

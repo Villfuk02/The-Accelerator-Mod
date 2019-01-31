@@ -81,14 +81,9 @@ public abstract class CustomOrb
         this.target = target;
         
 
-        this.descriptions = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
+        this.descriptions = CardCrawlGame.languagePack.getOrbString(this.ID).DESCRIPTION;
 
-        this.name = CardCrawlGame.languagePack.getOrbString(ID).NAME;
-        //SlimeboundMod.mostRecentSlime = this;
-
-
-
-        //AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeFlareEffect(this, OrbVFXColor), .1F));
+        this.name = CardCrawlGame.languagePack.getOrbString(this.ID).NAME;
         this.applyFocus();
 
         updateDescription();

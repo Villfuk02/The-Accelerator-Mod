@@ -16,7 +16,7 @@ import basemod.abstracts.CustomCard;
 
 public class Entropy extends CustomCard{
 	public static final String ID = "Entropy";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(AcceleratorMod.PREFIX + ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;

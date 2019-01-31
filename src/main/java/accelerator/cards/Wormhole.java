@@ -17,7 +17,7 @@ import basemod.abstracts.CustomCard;
 
 public class Wormhole extends CustomCard{
 	public static final String ID = "Wormhole";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(AcceleratorMod.PREFIX + ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UP_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

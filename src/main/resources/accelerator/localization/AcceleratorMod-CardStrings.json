@@ -1,179 +1,179 @@
 {	
-	"Strike": {
+	"accelerator:Strike": {
 		"NAME": "Strike",
 		"DESCRIPTION": "Channel a Potential Orb with !D! Potency."
 	},
-	"Defend": {
+	"accelerator:Defend": {
 		"NAME": "Defend",
 		"DESCRIPTION": "Channel a Magnetic Orb with !B! Potency."
 	},
-	"Stream": {
+	"accelerator:Stream": {
 		"NAME": "Stream",
 		"DESCRIPTION": "Channel 2 Kinetic Orbs with !D! Potency."
 	},
-	"Reverse": {
+	"accelerator:Reverse": {
 		"NAME": "Reverse",
 		"DESCRIPTION": "Reverse the order of your Orbs. NL Evoke your next Orb.",
 		"UPGRADE_DESCRIPTION": "Retain. NL Reverse the order of your Orbs. NL Evoke your next Orb."
 	},
-	"KickStart": {
+	"accelerator:KickStart": {
 		"NAME": "Kick-start",
 		"DESCRIPTION": "Innate. NL Channel a Magnetic Orb with !B! Potency. NL Evoke your next orb. NL Exhaust."
 	},
-	"Propulsion": {
+	"accelerator:Propulsion": {
 		"NAME": "Propulsion",
 		"DESCRIPTION": "Channel a Thermal Orb with !D! Potency. NL Draw 1 card."
 	},
-	"Blaze": {
+	"accelerator:Blaze": {
 		"NAME": "Blaze",
 		"DESCRIPTION": "Channel !M! Thermal Orbs with !D! Potency. NL Exhaust 1 card from your hand."
 	},
-	"Friction": {
+	"accelerator:Friction": {
 		"NAME": "Friction",
 		"DESCRIPTION": "Every time you Evoke a Kinetic Orb, Channel a Thermal Orb with the same Potency. NL Ethereal.",
 		"UPGRADE_DESCRIPTION": "Every time you Evoke a Kinetic Orb, Channel a Thermal Orb with the same Potency."
 	},
-	"Intensify": {
+	"accelerator:Intensify": {
 		"NAME": "Intensify",
 		"DESCRIPTION": "Gain 2 Orb slots. NL Gain 1 Focus.",
 		"UPGRADE_DESCRIPTION": "Innate. NL Gain 2 Orb slots. NL Gain 1 Focus."
 	},
-	"MagneticLink": {
+	"accelerator:MagneticLink": {
 		"NAME": "Magnetic Link",
 		"DESCRIPTION": "Channel !M! Magnetic Orbs with !B! Potency."
 	},
-	"Threaten": {
+	"accelerator:Threaten": {
 		"NAME": "Threaten",
 		"DESCRIPTION": "Channel a Potential Orb with !D! Potency. NL Apply 1 Vulnerable."
 	},
-	"Knockback": {
+	"accelerator:Knockback": {
 		"NAME": "Knockback",
 		"DESCRIPTION": "Channel a Kinetic Orb with !D! Potency. NL Discard 2 cards."
 	},
-	"Deflect": {
+	"accelerator:Deflect": {
 		"NAME": "Deflect",
 		"DESCRIPTION": "Channel a Magnetic Orb with !B! Potency (Has 1 more potency for each Magnetic Orb currently Channeled)."
 	},
-	"Polarize": {
+	"accelerator:Polarize": {
 		"NAME": "Polarize",
 		"DESCRIPTION": "Merge ALL adjacent Magnetic Orbs. NL Channel a Magnetic Orb with !B! Potency."
 	},
-	"MergeSort": {
+	"accelerator:MergeSort": {
 		"NAME": "Merge Sort",
 		"DESCRIPTION": "Merge ALL Orbs of the same type and sort them by potency (descending). NL Draw 1 card.",
 		"UPGRADE_DESCRIPTION": "Retain. NL Merge ALL Orbs of the same type and sort them by potency (descending). NL Draw 1 card."
 	},
-	"Radiation": {
+	"accelerator:Radiation": {
 		"NAME": "Radiation",
 		"DESCRIPTION": "Channel a Nuclear Orb with !M! Potency. NL (37 Damage in total)",
 		"UPGRADE_DESCRIPTION": "Channel a Nuclear Orb with !M! Potency. NL (49 Damage in total)"
 	},
-	"PushOut": {
+	"accelerator:PushOut": {
 		"NAME": "Push Out",
 		"DESCRIPTION": "Channel a Magnetic Orb with !B! Potency. NL Evoke your next Orb."
 	},
-	"Cooldown": {
+	"accelerator:Cooldown": {
 		"NAME": "Cooldown",
 		"DESCRIPTION": "Channel a Magnetic Orb with !B! Potency. NL Channel 1 Frost. NL Decrease potency of all currently Channeled Thermal Orbs by 2."
 	},
-	"GrowingPotential": {
+	"accelerator:GrowingPotential": {
 		"NAME": "Growing Potential",
 		"DESCRIPTION": "Gain 1 Orb slot. NL Push ALL Potential orbs to the back of Orb queue and trigger their passive effect.",
 		"UPGRADE_DESCRIPTION": "Gain 1 Orb slot. NL Push ALL Potential orbs to the back of Orb queue and trigger their passive effect twice."
 	},
-	"Spring": {
+	"accelerator:Spring": {
 		"NAME": "Spring",
 		"DESCRIPTION": "Merge ALL Kinetic Orbs into single Potential Orb and push it to the back of Orb queue.",
 		"UPGRADE_DESCRIPTION": "Merge ALL Kinetic AND Potential Orbs into single Potential Orb and push it to the back of Orb queue."
 	},
-	"Superposition": {
+	"accelerator:Superposition": {
 		"NAME": "Superposition",
 		"DESCRIPTION": "Evoke the next orb NL !M! times. NL Exhaust."
 	},
-	"Acceleration": {
+	"accelerator:Acceleration": {
 		"NAME": "Acceleration",
 		"DESCRIPTION": "Trigger the passive ability of ALL your Orbs !M! times."
 	},
-	"Demagnetize": {
+	"accelerator:Demagnetize": {
 		"NAME": "Demagnetize",
 		"DESCRIPTION": "Magnetic Orbs no longer Evoke other Magnetic Orbs. NL Gain !M! Dexterity."
 	},
-	"Newtons1": {
+	"accelerator:Newtons1": {
 		"NAME": "Newton's 1st Law",
 		"DESCRIPTION": "Kinetic Orbs don't decay for !M! turns."
 	},
-	"Newtons2": {
+	"accelerator:Newtons2": {
 		"NAME": "Newton's 2nd Law",
 		"DESCRIPTION": "Put the next Orb to the back of Orb queue and trigger it's passive effect.",
 		"UPGRADE_DESCRIPTION": "Put next 2 Orbs to the back of Orb queue and trigger their passive effects."
 	},
-	"Newtons3": {
+	"accelerator:Newtons3": {
 		"NAME": "Newton's 3rd Law",
 		"DESCRIPTION": "Evoke your rightmost Kinetic orb. NL Gain Block equal to it's Potency.",
 		"UPGRADE_DESCRIPTION": "Evoke your most Potent Kinetic orb. NL Gain Block equal to it's Potency."
 	},
-	"Roast": {
+	"accelerator:Roast": {
 		"NAME": "Roast",
 		"DESCRIPTION": "Channel a Thermal Orb with !D! Potency. NL Apply !M! Weak."
 	},
-	"IceSandwich": {
+	"accelerator:IceSandwich": {
 		"NAME": "Ice Sandwich",
 		"DESCRIPTION": "Channel 1 Frost. NL Channel a Magnetic Orb with !B! Potency. NL Channel 1 Frost."
 	},
-	"KnockOut": {
+	"accelerator:KnockOut": {
 		"NAME": "Knock Out",
 		"DESCRIPTION": "Channel a Kinetic Orb with !D! Potency. NL Apply !M! Weak. NL Apply 1 Stunned. NL Exhaust."
 	},
-	"Ground": {
+	"accelerator:Ground": {
 		"NAME": "Ground",
 		"DESCRIPTION": "Channel Potential Orb and Kinetic Orb, both with !D! Potency. NL Apply 1 Weak and Vulnerable.",
         "UPGRADE_DESCRIPTION": "Channel Kinetic Orb and Potential Orb, both with !D! Potency. NL Apply 1 Vulnerable and Weak."
 	},
-	"DarkMatter": {
+	"accelerator:DarkMatter": {
 		"NAME": "Dark Matter",
 		"DESCRIPTION": "Channel a Potential Orb with !D! Potency. NL Costs 1 less for every Potential Orb Channeled this combat."
 	},
-	"NuclearReactor": {
+	"accelerator:NuclearReactor": {
 		"NAME": "Nuclear Reactor",
 		"DESCRIPTION": "Channel a Nuclear Orb with !M! Potency. NL (5 Damage in total) NL Channel 1 Plasma.",
 		"UPGRADE_DESCRIPTION": "Channel a Nuclear Orb with !M! Potency. NL (12 Damage in total) NL Channel 1 Plasma."
 	},
-	"EnergyTransfer": {
+	"accelerator:EnergyTransfer": {
 		"NAME": "Energy Transfer",
 		"DESCRIPTION": "The next !M! times you would lose HP, Channel a Kinetic Orb targeted at yourself with Potency of the HP you would've lost."
 	},
-	"Relativity": {
+	"accelerator:Relativity": {
 		"NAME": "Relativity",
 		"DESCRIPTION": "Reduce the Potency of ALL your Orbs by 2. NL ALL enemies lose !M! Strength for this turn."
 	},
-	"ClosedSystem": {
+	"accelerator:ClosedSystem": {
 		"NAME": "Closed System",
 		"DESCRIPTION": "Channel a Magnetic Orb with !B! Potency. NL Next turn, gain [E] ."
 	},
-	"Impact": {
+	"accelerator:Impact": {
 		"NAME": "Impact",
 		"DESCRIPTION": "Channel 2 Kinetic Orbs with !D! Potency. NL Costs 1 less for every Kinetic Orb Channeled this turn."
 	},
-	"AllignedFields": {
+	"accelerator:AllignedFields": {
 		"NAME": "Alligned Fields",
 		"DESCRIPTION": "Channel a Magnetic Orb with !B! Potency. NL Trigger the passive effect of all your Magnetic Orbs.",
 		"UPGRADE_DESCRIPTION": "Trigger the passive effect of your rightmost Orb. NL Channel a Magnetic Orb with !B! Potency. NL Trigger the passive effect of all your Magnetic Orbs."
 	},
-	"SolarFlare": {
+	"accelerator:SolarFlare": {
 		"NAME": "Solar Flare",
 		"DESCRIPTION": "Channel Kinetic and Thermal Orb, both with !D! Potency. NL Channel a Nuclear Orb with !M! Potency. NL (4 Damage in total)",
 		"UPGRADE_DESCRIPTION": "Channel Kinetic and Thermal Orb, both with !D! Potency. NL Channel a Nuclear Orb with !M! Potency. NL (5 Damage in total)"
 	},
-	"Stabilize": {
+	"accelerator:Stabilize": {
 		"NAME": "Stabilize",
 		"DESCRIPTION": "Draw !M! card. NL Upgrade all cards in your hand for the rest of combat. NL Heal 1 HP for every card Upgraded. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Draw !M! cards. NL Upgrade all cards in your hand for the rest of combat. NL Heal 1 HP for every card Upgraded. NL Exhaust."
 	},
-	"PerpetuumMobile": {
+	"accelerator:PerpetuumMobile": {
 		"NAME": "Perpetuum Mobile",
 		"DESCRIPTION": "At the start of every turn, Channel a Kinetic Orb with !M! Potency."
 	},
-	"Entropy": {
+	"accelerator:Entropy": {
 		"NAME": "Entropy",
 		"DESCRIPTION": "Set the Potency of all your Orbs to NL their average + !M!.",
         "EXTENDED_DESCRIPTION":[
@@ -181,85 +181,85 @@
             ")"
         ]
 	},
-	"Dynamo": {
+	"accelerator:Dynamo": {
 		"NAME": "Dynamo",
 		"DESCRIPTION": "Gain [E] for every 4 Orbs you Evoke."
 	},
-	"DoubleSlit": {
+	"accelerator:DoubleSlit": {
 		"NAME": "Double Slit",
 		"DESCRIPTION": "Channel a Potential Orb with !D! Potency and randomly chosen target twice."
 	},
-	"Jet": {
+	"accelerator:Jet": {
 		"NAME": "Jet",
 		"DESCRIPTION": "Channel !M! Kinetic Orbs with !D! Potency."
 	},
-	"Search": {
+	"accelerator:Search": {
 		"NAME": "Search",
 		"DESCRIPTION": "Draw 3 cards.",
 		"UPGRADE_DESCRIPTION": "Retain. NL Draw 3 cards."
 	},
-	"Research": {
+	"accelerator:Research": {
 		"NAME": "Research",
 		"DESCRIPTION": "Draw cards until you draw a Skill or your draw pile is empty. NL Draw !M! card.",
 		"UPGRADE_DESCRIPTION": "Draw cards until you draw a Skill or your draw pile is empty. NL Draw !M! cards."
 	},
-	"Investigation": {
+	"accelerator:Investigation": {
 		"NAME": "Investigation",
 		"DESCRIPTION": "Draw cards until you draw 2 cards which cost 0 energy or your hand is full.",
 		"UPGRADE_DESCRIPTION": "Retain. NL Draw cards until you draw 2 cards which cost 0 energy or your hand is full."
 	},
-	"Blizzare": {
+	"accelerator:Blizzare": {
 		"NAME": "Blizzare",
 		"DESCRIPTION": "Channel a Nuclear Orb with !M! Potency. NL (4 Damage in total) NL Channel 1 Frost.",
 		"UPGRADE_DESCRIPTION": "Channel a Nuclear Orb with !M! Potency. NL (5 Damage in total) NL Channel 1 Frost."
 	},
-	"PiecingWhale": {
+	"accelerator:PiecingWhale": {
 		"NAME": "Piecing Whale",
 		"DESCRIPTION": "Channel a Potential Orb with !D! Potency. NL Apply !M! Piecing to ALL enemies. NL Exhaust."
 	},
-	"Efficiency": {
+	"accelerator:Efficiency": {
 		"NAME": "Efficiency",
 		"DESCRIPTION": "Every time an Orb loses Potency, gain !M! times as much Block."
 	},
-	"Pull": {
+	"accelerator:Pull": {
 		"NAME": "Pull",
 		"DESCRIPTION": "Channel a Magnetic Orb with !B! Potency. NL Draw !M! card.",
 		"UPGRADE_DESCRIPTION": "Channel a Magnetic Orb with !B! Potency. NL Draw !M! cards."
 	},
-	"Engine": {
+	"accelerator:Engine": {
 		"NAME": "Engine",
 		"DESCRIPTION": "Channel a Kinetic Orb with !D! Potency and randomly chosen target X times."
 	},
-	"Streamline": {
+	"accelerator:Streamline": {
 		"NAME": "Streamline",
 		"DESCRIPTION": "Lose 1 Orb slot. NL Gain !M! Strength."
 	},
-	"MobiusLoop": {
+	"accelerator:MobiusLoop": {
 		"NAME": "Möbius Loop",
 		"DESCRIPTION": "At the start of your turn, trigger the passive ability of your leftmost Orb !M! times."
 	},
-	"Spin": {
+	"accelerator:Spin": {
 		"NAME": "Spin",
 		"DESCRIPTION": "Every time you play a Skill, draw 1 card."
 	},
-	"Fragmentation": {
+	"accelerator:Fragmentation": {
 		"NAME": "Fragmentation",
 		"DESCRIPTION": "Deal !D! damage and Gain !B! Block for every Magnetic Orb you have."
 	},
-	"BlackHole": {
+	"accelerator:BlackHole": {
 		"NAME": "Black Hole",
 		"DESCRIPTION": "Channel a Potential Orb with !D! Potency. NL Exhaust. NL Can be upgraded any number of times."
 	},
-	"Drain": {
+	"accelerator:Drain": {
 		"NAME": "Drain",
 		"DESCRIPTION": "Deal damage equal to !M! % of your most potent Potential Orb's Potency. NL Decrease its Potency by 3."
 	},
-	"Exchange": {
+	"accelerator:Exchange": {
 		"NAME": "Exchange",
 		"DESCRIPTION": "Channel a Magnetic Orb with !B! Potency. NL Discard random card. NL Put a card from your discard pile into your hand.",
 		"UPGRADE_DESCRIPTION": "Channel a Magnetic Orb with !B! Potency. NL Discard 1 card. NL Put a card from your discard pile into your hand."
 	},
-	"Wormhole": {
+	"accelerator:Wormhole": {
 		"NAME": "Wormhole",
 		"DESCRIPTION": "Choose a new target for ALL currently Channeled Potential Orbs.",
 		"UPGRADE_DESCRIPTION": "Choose a new target for ALL currently Channeled Kinetic and Potential Orbs."
