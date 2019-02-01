@@ -293,5 +293,10 @@
 	"accelerator:Chaos": {
 		"NAME": "Chaos",
 		"DESCRIPTION": "Channel !M! random Orbs with 3 Potency. NL Discard 1 random card."
+	},
+	"accelerator:TheoryOfEverything": {
+		"NAME": "Theory Of Everything",
+		"DESCRIPTION": "Deal !D! damage. NL Deals twice as much damage for every unique Orb you have.",
+		"UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL Deals twice as much damage for every unique Orb you have."
 	}
 }

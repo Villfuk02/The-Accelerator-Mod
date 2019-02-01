@@ -28,6 +28,11 @@ public class Cloud extends CustomRelic {
 	}
 	
 	@Override
+	public void atBattleStart() {
+		firstTurn = true;
+	}
+	
+	@Override
     public void atTurnStart() {
         if (this.firstTurn ) {
             this.flash();
