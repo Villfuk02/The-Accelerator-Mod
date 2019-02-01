@@ -13,8 +13,13 @@
 	},
 	"accelerator:Reverse": {
 		"NAME": "Reverse",
-		"DESCRIPTION": "Reverse the order of your Orbs. NL Evoke your next Orb.",
-		"UPGRADE_DESCRIPTION": "Retain. NL Reverse the order of your Orbs. NL Evoke your next Orb."
+		"DESCRIPTION": "Reverse the order of your Orbs. NL Draw 1 card.",
+		"UPGRADE_DESCRIPTION": "Retain. NL Reverse the order of your Orbs. NL Draw 1 card."
+	},
+	"accelerator:EvokeCommand": {
+		"NAME": "Evoke Command",
+		"DESCRIPTION": "Evoke 2 next Orbs.",
+		"UPGRADE_DESCRIPTION": "Retain. NL Evoke 2 next Orbs."
 	},
 	"accelerator:KickStart": {
 		"NAME": "Kick-start",

@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import accelerator.AcceleratorMod;
 import accelerator.cards.Defend;
+import accelerator.cards.EvokeCommand;
 import accelerator.cards.Reverse;
 import accelerator.cards.Stream;
 import accelerator.cards.Strike;
@@ -58,6 +59,7 @@ public class TheAccelerator extends CustomPlayer{
 		retVal.add(AcceleratorMod.PREFIX + Defend.ID);
 		retVal.add(AcceleratorMod.PREFIX + Reverse.ID);
 		retVal.add(AcceleratorMod.PREFIX + Reverse.ID);
+		retVal.add(AcceleratorMod.PREFIX + EvokeCommand.ID);
 		return retVal;
 	}
 	

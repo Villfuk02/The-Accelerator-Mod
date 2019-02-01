@@ -160,15 +160,16 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 	public void receiveEditCards() {
 		logger.info("Adding Accelerator Cards");
 		
-		//TOTAL (67)
+		//TOTAL (68)
 		
 			// COLORLESS ()
 		
-			// BASIC (4)
+			// BASIC (5)
 				BaseMod.addCard(new Defend());
 				BaseMod.addCard(new Strike());
 				BaseMod.addCard(new Stream());
 				BaseMod.addCard(new Reverse());
+				BaseMod.addCard(new EvokeCommand());
 		
 			// COMMON (14)
 				//	Attacks (6)

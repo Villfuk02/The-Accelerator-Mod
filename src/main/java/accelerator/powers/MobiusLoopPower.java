@@ -24,7 +24,6 @@ public class MobiusLoopPower extends AbstractPower
         this.owner = owner;
         this.amount = newAmount;
         this.updateDescription();
-        this.priority = -99;
         this.img = new Texture(AcceleratorMod.POWER_IMG_PATH + NAME + ".png");
     }  
     
@@ -34,7 +33,7 @@ public class MobiusLoopPower extends AbstractPower
     }  
     
     @Override
-    public void atStartOfTurn() {
+    public void atStartOfTurnPostDraw() {
     	this.flash();
     	AbstractDungeon.actionManager.addToTop(new MobiusLoopAction(amount));
     }

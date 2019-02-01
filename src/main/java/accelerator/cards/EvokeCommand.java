@@ -1,7 +1,7 @@
 package accelerator.cards;
 
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.defect.EvokeOrbAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,19 +10,18 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import accelerator.AcceleratorMod;
-import accelerator.actions.ReverseAction;
 import accelerator.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
-public class Reverse extends CustomCard{
-	public static final String ID = "Reverse";
+public class EvokeCommand extends CustomCard{
+	public static final String ID = "EvokeCommand";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(AcceleratorMod.PREFIX + ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UP_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 0;
 
-	public Reverse() {
+	public EvokeCommand() {
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
         		AbstractCard.CardType.SKILL, AbstractCardEnum.ACC,
         		AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
@@ -30,7 +29,7 @@ public class Reverse extends CustomCard{
 
 	@Override
 	public AbstractCard makeCopy() {
-		return new Reverse();
+		return new EvokeCommand();
 	}
 	
 	@Override
@@ -51,7 +50,6 @@ public class Reverse extends CustomCard{
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {		
-		AbstractDungeon.actionManager.addToBottom(new ReverseAction());
-		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p,1));
+		AbstractDungeon.actionManager.addToBottom(new EvokeOrbAction(2));
 	}
 }
