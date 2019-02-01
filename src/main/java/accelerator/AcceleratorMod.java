@@ -160,7 +160,7 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 	public void receiveEditCards() {
 		logger.info("Adding Accelerator Cards");
 		
-		//TOTAL (59)
+		//TOTAL (66)
 		
 			// COLORLESS ()
 		
@@ -170,16 +170,16 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 				BaseMod.addCard(new Stream());
 				BaseMod.addCard(new Reverse());
 		
-			// COMMON (13)
+			// COMMON (14)
 				//	Attacks (6)
 					BaseMod.addCard(new Propulsion());
 					BaseMod.addCard(new Threat());
 					BaseMod.addCard(new Knockback());
 					BaseMod.addCard(new Roast());
 					BaseMod.addCard(new DoubleSlit());
-					BaseMod.addCard(new Jet());
+					BaseMod.addCard(new Chaos());
 		
-				//	Skills (7)
+				//	Skills (8)
 					BaseMod.addCard(new Deflect());
 					BaseMod.addCard(new IceSandwich());
 					BaseMod.addCard(new PushOut());
@@ -187,9 +187,10 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new Search());
 					BaseMod.addCard(new Pull());
 					BaseMod.addCard(new Exchange());
+					BaseMod.addCard(new Reject());
 		
-			// UNCOMMON (28)
-				// 	Attacks(9)
+			// UNCOMMON (31)
+				// 	Attacks(11)
 					BaseMod.addCard(new Blaze());
 					BaseMod.addCard(new KnockOut());
 					BaseMod.addCard(new Ground());
@@ -199,6 +200,8 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new Blizzare());
 					BaseMod.addCard(new PiecingWhale());
 					BaseMod.addCard(new Fragmentation());
+					BaseMod.addCard(new Inferno());
+					BaseMod.addCard(new Jet());
 		
 				//	Skills (14)
 					BaseMod.addCard(new KickStart());
@@ -216,26 +219,30 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new Research());
 					BaseMod.addCard(new Wormhole());
 		
-				// 	Powers (5)
+				// 	Powers (6)
 					BaseMod.addCard(new Intensify());
 					BaseMod.addCard(new Demagnetize());
 					BaseMod.addCard(new PerpetuumMobile());
 					BaseMod.addCard(new Streamline());
 					BaseMod.addCard(new MobiusLoop());
+					BaseMod.addCard(new Generator());
 		
-			// RARE (14)
+			// RARE (17)
 				//	Attacks (4)
 					BaseMod.addCard(new Radiation());
 					BaseMod.addCard(new Engine());
 					BaseMod.addCard(new Drain());
 					BaseMod.addCard(new BlackHole());
 		
-				//	Skills (5)
+				//	Skills (8)
 					BaseMod.addCard(new MergeSort());
 					BaseMod.addCard(new Spring());
 					BaseMod.addCard(new Acceleration());
 					BaseMod.addCard(new GrowingPotential());
 					BaseMod.addCard(new Investigation());
+					BaseMod.addCard(new Overheat());
+					BaseMod.addCard(new Magnetosphere());
+					BaseMod.addCard(new MagneticResonance());
 		
 				//	Powers (5)
 					BaseMod.addCard(new Friction());

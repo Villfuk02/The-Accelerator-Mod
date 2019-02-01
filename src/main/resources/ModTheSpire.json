@@ -5,10 +5,11 @@
     "Villfuk02"
   ],
   "description": "Adds The Accelerator as a new playable character.",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "dependencies": [
     "basemod", "stslib"
   ],
   "sts_version": "99-99-1999",
-  "mts_version": "3.6.0"
+  "mts_version": "3.6.0",
+  "update_json": "https://api.github.com/repos/Villfuk02/The-Accelerator-Mod/releases/latest"
 }

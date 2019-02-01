@@ -31,9 +31,10 @@ public static final String ID = "ThermalOrb";
 	
 	
 	public void updateDescription() {			
-		int a = 1;
+		int a = 0;
 		if(AbstractDungeon.player.hasPower(FocusPower.POWER_ID))
 			a = AbstractDungeon.player.getPower(FocusPower.POWER_ID).amount;
+		a += 2;
 		this.description = this.descriptions[0] + a + this.descriptions[1] + potency + this.descriptions[2];
 		}
 	

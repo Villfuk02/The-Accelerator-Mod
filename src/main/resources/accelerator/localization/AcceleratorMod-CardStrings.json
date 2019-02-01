@@ -263,5 +263,35 @@
 		"NAME": "Wormhole",
 		"DESCRIPTION": "Choose a new target for ALL currently Channeled Potential Orbs.",
 		"UPGRADE_DESCRIPTION": "Choose a new target for ALL currently Channeled Kinetic and Potential Orbs."
+	},
+	"accelerator:Reject": {
+		"NAME": "Reject",
+		"DESCRIPTION": "Discard 1 card. Trigger the passive ability of your rightmost Orb !M! times and Evoke it."
+	},
+	"accelerator:Fission": {
+		"NAME": "Fission",
+		"DESCRIPTION": "Every time you Evoke Plasma, decrease the cost of a random card in your hand by !M! for this combat."
+	},
+	"accelerator:Overheat": {
+		"NAME": "Overheat",
+		"DESCRIPTION": "Transform ALL Thermal Orbs into Plasma. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Transform ALL Thermal Orbs into Plasma."
+	},
+	"accelerator:Magnetosphere": {
+		"NAME": "Magnetosphere",
+		"DESCRIPTION": "Channel a Magnetic Orb with !B! Potency. NL Gain 1 Artifact. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Channel a Magnetic Orb with !B! Potency. NL Gain 1 Artifact."
+	},
+	"accelerator:MagneticResonance": {
+		"NAME": "Magnetic Resonance",
+		"DESCRIPTION": "Channel a Magnetic Orb with !B! Potency. NL Trigger its passive effect !M! X times."
+	},
+	"accelerator:Inferno": {
+		"NAME": "Inferno",
+		"DESCRIPTION": "Channel X Thermal Orbs with !D! Potency. NL Draw X more cards next turn. NL Exhaust."
+	},
+	"accelerator:Chaos": {
+		"NAME": "Chaos",
+		"DESCRIPTION": "Channel !M! random Orbs with 3 Potency. NL Discard 1 random card."
 	}
 }
