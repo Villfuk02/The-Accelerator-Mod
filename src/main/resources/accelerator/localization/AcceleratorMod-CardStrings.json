@@ -82,8 +82,7 @@
 	},
 	"accelerator:GrowingPotential": {
 		"NAME": "Growing Potential",
-		"DESCRIPTION": "Gain 1 Orb slot. NL Push ALL Potential orbs to the back of Orb queue and trigger their passive effect.",
-		"UPGRADE_DESCRIPTION": "Gain 1 Orb slot. NL Push ALL Potential orbs to the back of Orb queue and trigger their passive effect twice."
+		"DESCRIPTION": "Gain 1 Orb slot. NL Push ALL Potential orbs to the back of Orb queue and trigger their passive effect !M! times."
 	},
 	"accelerator:Spring": {
 		"NAME": "Spring",
@@ -96,7 +95,7 @@
 	},
 	"accelerator:Acceleration": {
 		"NAME": "Acceleration",
-		"DESCRIPTION": "Trigger the passive ability of ALL your Orbs !M! times."
+		"DESCRIPTION": "Trigger the passive effect of ALL your Orbs !M! times."
 	},
 	"accelerator:Demagnetize": {
 		"NAME": "Demagnetize",
@@ -108,8 +107,8 @@
 	},
 	"accelerator:Newtons2": {
 		"NAME": "Newton's 2nd Law",
-		"DESCRIPTION": "Put the next Orb to the back of Orb queue and trigger it's passive effect.",
-		"UPGRADE_DESCRIPTION": "Put next 2 Orbs to the back of Orb queue and trigger their passive effects."
+		"DESCRIPTION": "Put the next Orb to the back of Orb queue and trigger it's passive effect twice.",
+		"UPGRADE_DESCRIPTION": "Put next 2 Orbs to the back of Orb queue and trigger their passive effects twice."
 	},
 	"accelerator:Newtons3": {
 		"NAME": "Newton's 3rd Law",
@@ -240,7 +239,7 @@
 	},
 	"accelerator:MobiusLoop": {
 		"NAME": "Möbius Loop",
-		"DESCRIPTION": "At the start of your turn, trigger the passive ability of your leftmost Orb !M! times."
+		"DESCRIPTION": "At the start of your turn, trigger the passive effect of your leftmost Orb !M! times."
 	},
 	"accelerator:Spin": {
 		"NAME": "Spin",
@@ -248,7 +247,7 @@
 	},
 	"accelerator:Fragmentation": {
 		"NAME": "Fragmentation",
-		"DESCRIPTION": "Deal !D! damage and Gain !B! Block for every Magnetic Orb you have."
+		"DESCRIPTION": "Deal !D! damage and gain !B! Block for every Magnetic Orb you have."
 	},
 	"accelerator:BlackHole": {
 		"NAME": "Black Hole",
@@ -270,7 +269,7 @@
 	},
 	"accelerator:Reject": {
 		"NAME": "Reject",
-		"DESCRIPTION": "Discard 1 card. Trigger the passive ability of your rightmost Orb !M! times and Evoke it."
+		"DESCRIPTION": "Discard 1 card. Trigger the passive effect of your rightmost Orb !M! times and Evoke it."
 	},
 	"accelerator:Fission": {
 		"NAME": "Fission",
@@ -310,5 +309,13 @@
 	"accelerator:Encryption": {
 		"NAME": "Encryption",
 		"DESCRIPTION": "Gain !B! Block !M! times (once for every unique Orb you have)."
+	},
+	"accelerator:Shove": {
+		"NAME": "Shove",
+		"DESCRIPTION": "Channel a Kinetic Orb with !D! Potency."
+	},
+	"accelerator:Bake": {
+		"NAME": "Bake",
+		"DESCRIPTION": "Trigger the passive effect of your !M! leftmost orbs. NL Channel a Thermal Orb with !D! Potency."
 	}
 }

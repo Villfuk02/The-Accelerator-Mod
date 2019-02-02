@@ -184,7 +184,7 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 	public void receiveEditCards() {
 		logger.info("Adding Accelerator Cards");
 		
-		//TOTAL (70)
+		//TOTAL (72)
 		
 			// COLORLESS ()
 		
@@ -195,16 +195,17 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 				BaseMod.addCard(new Reverse());
 				BaseMod.addCard(new EvokeCommand());
 		
-			// COMMON (14)
-				//	Attacks (6)
+			// COMMON (16)
+				//	Attacks (7)
 					BaseMod.addCard(new Propulsion());
 					BaseMod.addCard(new Threat());
 					BaseMod.addCard(new Knockback());
 					BaseMod.addCard(new Roast());
 					BaseMod.addCard(new DoubleSlit());
 					BaseMod.addCard(new Chaos());
+					BaseMod.addCard(new Shove());
 		
-				//	Skills (8)
+				//	Skills (9)
 					BaseMod.addCard(new Deflect());
 					BaseMod.addCard(new IceSandwich());
 					BaseMod.addCard(new PushOut());
@@ -213,9 +214,10 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new Pull());
 					BaseMod.addCard(new Exchange());
 					BaseMod.addCard(new Reject());
+					BaseMod.addCard(new Wormhole());
 		
 			// UNCOMMON (33)
-				// 	Attacks(12)
+				// 	Attacks(13)
 					BaseMod.addCard(new Blaze());
 					BaseMod.addCard(new KnockOut());
 					BaseMod.addCard(new Ground());
@@ -228,8 +230,9 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new Inferno());
 					BaseMod.addCard(new Jet());
 					BaseMod.addCard(new TheoryOfEverything());
+					BaseMod.addCard(new Bake());
 		
-				//	Skills (15)
+				//	Skills (14)
 					BaseMod.addCard(new KickStart());
 					BaseMod.addCard(new MagneticLink());
 					BaseMod.addCard(new Polarize());
@@ -243,7 +246,6 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new Stabilize());
 					BaseMod.addCard(new Entropy());
 					BaseMod.addCard(new Research());
-					BaseMod.addCard(new Wormhole());
 					BaseMod.addCard(new Encryption());
 		
 				// 	Powers (6)

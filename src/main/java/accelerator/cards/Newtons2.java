@@ -9,8 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import accelerator.AcceleratorMod;
 import accelerator.actions.MoveOrbToEndAction;
-import accelerator.actions.OrbEffectAction;
-import accelerator.orbs.CustomOrb;
+import accelerator.actions.PassiveOrbAction;
 import accelerator.patches.AbstractCardEnum;
 import basemod.abstracts.CustomCard;
 
@@ -45,10 +44,12 @@ public class Newtons2 extends CustomCard{
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new MoveOrbToEndAction(0));
-		AbstractDungeon.actionManager.addToBottom(new OrbEffectAction((CustomOrb) p.orbs.get(0)));
+		AbstractDungeon.actionManager.addToBottom(new PassiveOrbAction(p.orbs.get(0)));
+		AbstractDungeon.actionManager.addToBottom(new PassiveOrbAction(p.orbs.get(0)));
 		if(upgraded) {
 			AbstractDungeon.actionManager.addToBottom(new MoveOrbToEndAction(0));
-			AbstractDungeon.actionManager.addToBottom(new OrbEffectAction((CustomOrb) p.orbs.get(1)));
+			AbstractDungeon.actionManager.addToBottom(new PassiveOrbAction(p.orbs.get(1)));
+			AbstractDungeon.actionManager.addToBottom(new PassiveOrbAction(p.orbs.get(1)));
 		}
 	}
 }

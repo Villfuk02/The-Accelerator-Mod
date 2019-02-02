@@ -20,13 +20,14 @@ public class GrowingPotential extends CustomCard{
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(AcceleratorMod.PREFIX + ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String UP_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 2;
+	private static final int MAGIC = 2;
 
 	public GrowingPotential() {
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
         		AbstractCard.CardType.SKILL, AbstractCardEnum.ACC,
         		AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
+		this.baseMagicNumber = this.magicNumber = MAGIC;
 	}
 
 	@Override
@@ -38,8 +39,7 @@ public class GrowingPotential extends CustomCard{
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.rawDescription = UP_DESCRIPTION;
-			initializeDescription();
+			this.upgradeMagicNumber(1);
 		} 
 	}
 
@@ -47,19 +47,12 @@ public class GrowingPotential extends CustomCard{
 	public void use(AbstractPlayer p, AbstractMonster m) {	
 		AbstractDungeon.actionManager.addToBottom(new IncreaseMaxOrbAction(1));
 		AbstractDungeon.actionManager.addToBottom(new GrowingPotentialAction());
-		
-		for (int i = 0; i < p.filledOrbCount(); i++) {
-    		if(p.orbs.get(i) instanceof PotentialOrb) {	 
-    			AbstractDungeon.actionManager.addToBottom(new PassiveOrbAction(p.orbs.get(i)));
-            }
-        }
-	
-		if(upgraded) {
+		for(int c = 0; c < this.magicNumber; c++) {
 			for (int i = 0; i < p.filledOrbCount(); i++) {
 	    		if(p.orbs.get(i) instanceof PotentialOrb) {	 
 	    			AbstractDungeon.actionManager.addToBottom(new PassiveOrbAction(p.orbs.get(i)));
-                }
-            }		
+	            }
+	        }
 		}
 	}
 }
