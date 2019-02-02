@@ -35,7 +35,7 @@ public class MobiusLoopPower extends AbstractPower
     @Override
     public void atStartOfTurnPostDraw() {
     	this.flash();
-    	AbstractDungeon.actionManager.addToTop(new MobiusLoopAction(amount));
+    	AbstractDungeon.actionManager.addToBottom(new MobiusLoopAction(amount));
     }
    
 }

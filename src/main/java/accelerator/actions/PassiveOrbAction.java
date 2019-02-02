@@ -18,9 +18,9 @@ public class PassiveOrbAction extends AbstractGameAction{
 	    this.orb = orb;
 	    triggered = false;
 	    if(Settings.FAST_MODE)
-	    	this.duration = Settings.ACTION_DUR_XFAST;
+	    	this.duration = 0.0f;
 	    else
-	    	this.duration = Settings.ACTION_DUR_FAST;
+	    	this.duration = Settings.ACTION_DUR_FASTER;
 	}
 
 	@Override

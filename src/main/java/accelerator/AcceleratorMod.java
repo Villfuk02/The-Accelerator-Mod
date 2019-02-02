@@ -14,6 +14,11 @@ import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.relics.DataDisk;
+import com.megacrit.cardcrawl.relics.EmotionChip;
+import com.megacrit.cardcrawl.relics.Inserter;
+import com.megacrit.cardcrawl.relics.NuclearBattery;
+import com.megacrit.cardcrawl.relics.RunicCapacitor;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import accelerator.cards.*;
@@ -22,6 +27,7 @@ import accelerator.patches.AbstractCardEnum;
 import accelerator.patches.TheAcceleratorEnum;
 import accelerator.relics.*;
 import basemod.BaseMod;
+import basemod.helpers.RelicType;
 import basemod.interfaces.PostBattleSubscriber;
 import basemod.interfaces.PostDungeonInitializeSubscriber;
 import basemod.interfaces.PostExhaustSubscriber;
@@ -153,14 +159,32 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 	@Override
 	public void receiveEditRelics() {
 		logger.info("Adding Accelerator Relics");		
+		//Accelerator only (6)
 		BaseMod.addRelicToCustomPool(new Cloud(), AbstractCardEnum.ACC);
+		BaseMod.addRelicToCustomPool(new BetterCloud(), AbstractCardEnum.ACC);
+		
+		BaseMod.addRelicToCustomPool(new HolographicKunai(), AbstractCardEnum.ACC);
+		BaseMod.addRelicToCustomPool(new HolographicShuriken(), AbstractCardEnum.ACC);
+		BaseMod.addRelicToCustomPool(new HolographicFan(), AbstractCardEnum.ACC);
+		BaseMod.addRelicToCustomPool(new HolographicScroll(), AbstractCardEnum.ACC);
+		
+		//Accelerator + Defect (2)
+		BaseMod.addRelic(new LaserPointer(), RelicType.SHARED);
+		BaseMod.addRelic(new AutoCompiler(), RelicType.SHARED);
+		
+		//Cloned from Defect (5)
+		BaseMod.addRelicToCustomPool(new DataDisk().makeCopy(), AbstractCardEnum.ACC);
+		BaseMod.addRelicToCustomPool(new RunicCapacitor().makeCopy(), AbstractCardEnum.ACC);
+		BaseMod.addRelicToCustomPool(new EmotionChip().makeCopy(), AbstractCardEnum.ACC);
+		BaseMod.addRelicToCustomPool(new Inserter().makeCopy(), AbstractCardEnum.ACC);
+		BaseMod.addRelicToCustomPool(new NuclearBattery().makeCopy(), AbstractCardEnum.ACC);
 	}
 	
 	@Override
 	public void receiveEditCards() {
 		logger.info("Adding Accelerator Cards");
 		
-		//TOTAL (68)
+		//TOTAL (70)
 		
 			// COLORLESS ()
 		
@@ -190,7 +214,7 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new Exchange());
 					BaseMod.addCard(new Reject());
 		
-			// UNCOMMON (32)
+			// UNCOMMON (33)
 				// 	Attacks(12)
 					BaseMod.addCard(new Blaze());
 					BaseMod.addCard(new KnockOut());
@@ -205,7 +229,7 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new Jet());
 					BaseMod.addCard(new TheoryOfEverything());
 		
-				//	Skills (14)
+				//	Skills (15)
 					BaseMod.addCard(new KickStart());
 					BaseMod.addCard(new MagneticLink());
 					BaseMod.addCard(new Polarize());
@@ -220,6 +244,7 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new Entropy());
 					BaseMod.addCard(new Research());
 					BaseMod.addCard(new Wormhole());
+					BaseMod.addCard(new Encryption());
 		
 				// 	Powers (6)
 					BaseMod.addCard(new Intensify());
@@ -229,7 +254,7 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new MobiusLoop());
 					BaseMod.addCard(new Generator());
 		
-			// RARE (17)
+			// RARE (18)
 				//	Attacks (4)
 					BaseMod.addCard(new Radiation());
 					BaseMod.addCard(new Engine());
@@ -246,12 +271,13 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new Magnetosphere());
 					BaseMod.addCard(new MagneticResonance());
 		
-				//	Powers (5)
+				//	Powers (6)
 					BaseMod.addCard(new Friction());
 					BaseMod.addCard(new EnergyTransfer());
 					BaseMod.addCard(new Dynamo());
 					BaseMod.addCard(new Efficiency());
 					BaseMod.addCard(new Spin());
+					BaseMod.addCard(new UniversalForm());
 		
 	}
 

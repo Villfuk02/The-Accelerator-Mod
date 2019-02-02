@@ -18,8 +18,8 @@
 	},
 	"accelerator:EvokeCommand": {
 		"NAME": "Evoke Command",
-		"DESCRIPTION": "Evoke 2 next Orbs.",
-		"UPGRADE_DESCRIPTION": "Retain. NL Evoke 2 next Orbs."
+		"DESCRIPTION": "Evoke next 2 Orbs.",
+		"UPGRADE_DESCRIPTION": "Retain. NL Evoke next 2 Orbs."
 	},
 	"accelerator:KickStart": {
 		"NAME": "Kick-start",
@@ -35,8 +35,7 @@
 	},
 	"accelerator:Friction": {
 		"NAME": "Friction",
-		"DESCRIPTION": "Every time you Evoke a Kinetic Orb, Channel a Thermal Orb with the same Potency. NL Ethereal.",
-		"UPGRADE_DESCRIPTION": "Every time you Evoke a Kinetic Orb, Channel a Thermal Orb with the same Potency."
+		"DESCRIPTION": "Lose 1 Focus. NL Every time you Evoke a Kinetic Orb, Channel a Thermal Orb with the same Potency."
 	},
 	"accelerator:Intensify": {
 		"NAME": "Intensify",
@@ -303,5 +302,13 @@
 		"NAME": "Theory Of Everything",
 		"DESCRIPTION": "Deal !D! damage. NL Deals twice as much damage for every unique Orb you have.",
 		"UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL Deals twice as much damage for every unique Orb you have."
+	},
+	"accelerator:UniversalForm": {
+		"NAME": "Universal Form",
+		"DESCRIPTION": "At the start of every turn, gain Strength and Dexterity equal to the amount of unique Orbs you have. NL Lose it at the end of that turn."
+	},
+	"accelerator:Encryption": {
+		"NAME": "Encryption",
+		"DESCRIPTION": "Gain !B! Block !M! times (once for every unique Orb you have)."
 	}
 }

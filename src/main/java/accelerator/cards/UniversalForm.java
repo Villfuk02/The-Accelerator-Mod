@@ -7,29 +7,30 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.FocusPower;
 
 import accelerator.AcceleratorMod;
 import accelerator.patches.AbstractCardEnum;
-import accelerator.powers.FrictionPower;
+import accelerator.powers.UniversalPower;
 import basemod.abstracts.CustomCard;
+import basemod.helpers.BaseModCardTags;
 
-public class Friction extends CustomCard{
-	public static final String ID = "Friction";
+public class UniversalForm extends CustomCard{
+	public static final String ID = "UniversalForm";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(AcceleratorMod.PREFIX + ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 3;
 
-	public Friction() {
+	public UniversalForm() {
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
         		AbstractCard.CardType.POWER, AbstractCardEnum.ACC,
         		AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
+		this.tags.add(BaseModCardTags.FORM);
 	}
 
 	@Override
 	public AbstractCard makeCopy() {
-		return new Friction();
+		return new UniversalForm();
 	}
 
 	@Override
@@ -42,7 +43,6 @@ public class Friction extends CustomCard{
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FocusPower(p, -1), -1));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrictionPower(p, 1), 1));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new UniversalPower(p)));
 	}
 }
