@@ -49,12 +49,15 @@ public class Encryption extends CustomCard{
 	@Override
     public void applyPowers() { 
         final ArrayList<String> orbList = new ArrayList<String>();
+        this.magicNumber = this.baseMagicNumber;
         for (final AbstractOrb o : AbstractDungeon.player.orbs) {
             if (o.ID != null && !o.ID.equals("Empty") && !orbList.contains(o.ID)) {
                 orbList.add(o.ID);
                 this.magicNumber++;
             }
         }
+        if(magicNumber != baseMagicNumber)
+        	this.isMagicNumberModified = true;
         super.applyPowers();
         this.initializeDescription();
     }
@@ -62,12 +65,15 @@ public class Encryption extends CustomCard{
 	@Override
 	public void calculateCardDamage(final AbstractMonster m) {
         final ArrayList<String> orbList = new ArrayList<String>();
+        this.magicNumber = this.baseMagicNumber;
         for (final AbstractOrb o : AbstractDungeon.player.orbs) {
             if (o.ID != null && !o.ID.equals("Empty") && !orbList.contains(o.ID)) {
                 orbList.add(o.ID);
                 this.magicNumber++;
             }
         }
+        if(magicNumber != baseMagicNumber)
+        	this.isMagicNumberModified = true;
 		super.calculateCardDamage(m);
         this.initializeDescription();
 	}

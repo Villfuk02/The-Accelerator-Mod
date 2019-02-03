@@ -1,7 +1,6 @@
 package accelerator.cards;
 
-
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.defect.EvokeOrbAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -26,6 +25,7 @@ public class Reverse extends CustomCard{
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
         		AbstractCard.CardType.SKILL, AbstractCardEnum.ACC,
         		AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
+		this.retain = true;
 	}
 
 	@Override
@@ -35,15 +35,13 @@ public class Reverse extends CustomCard{
 	
 	@Override
 	public void atTurnStart() {
-		if(upgraded)
-			this.retain = true;
+		this.retain = true;
 	}
 
 	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.retain = true;
 			this.rawDescription = UP_DESCRIPTION;
 			initializeDescription();
 		} 
@@ -52,6 +50,7 @@ public class Reverse extends CustomCard{
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {		
 		AbstractDungeon.actionManager.addToBottom(new ReverseAction());
-		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p,1));
+		if(upgraded)
+			AbstractDungeon.actionManager.addToBottom(new EvokeOrbAction(1));
 	}
 }

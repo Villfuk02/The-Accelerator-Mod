@@ -19,12 +19,14 @@ public class EvokeCommand extends CustomCard{
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UP_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-	private static final int COST = 0;
+	private static final int COST = 0;	
 
 	public EvokeCommand() {
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
         		AbstractCard.CardType.SKILL, AbstractCardEnum.ACC,
         		AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
+		this.magicNumber = this.baseMagicNumber = 1;
+		this.retain = true;
 	}
 
 	@Override
@@ -34,15 +36,14 @@ public class EvokeCommand extends CustomCard{
 	
 	@Override
 	public void atTurnStart() {
-		if(upgraded)
-			this.retain = true;
+		this.retain = true;
 	}
 
 	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.retain = true;
+			this.upgradeMagicNumber(1);
 			this.rawDescription = UP_DESCRIPTION;
 			initializeDescription();
 		} 
@@ -50,6 +51,6 @@ public class EvokeCommand extends CustomCard{
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {		
-		AbstractDungeon.actionManager.addToBottom(new EvokeOrbAction(2));
+		AbstractDungeon.actionManager.addToBottom(new EvokeOrbAction(this.magicNumber));
 	}
 }

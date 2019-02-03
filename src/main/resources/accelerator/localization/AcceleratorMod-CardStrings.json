@@ -13,13 +13,13 @@
 	},
 	"accelerator:Reverse": {
 		"NAME": "Reverse",
-		"DESCRIPTION": "Reverse the order of your Orbs. NL Draw 1 card.",
-		"UPGRADE_DESCRIPTION": "Retain. NL Reverse the order of your Orbs. NL Draw 1 card."
+		"DESCRIPTION": "Retain. NL Reverse the order of your Orbs.",
+		"UPGRADE_DESCRIPTION": "Retain. NL Reverse the order of your Orbs. NL Evoke the next Orb."
 	},
 	"accelerator:EvokeCommand": {
 		"NAME": "Evoke Command",
-		"DESCRIPTION": "Evoke next 2 Orbs.",
-		"UPGRADE_DESCRIPTION": "Retain. NL Evoke next 2 Orbs."
+		"DESCRIPTION": "Retain. NL Evoke the next Orb.",
+		"UPGRADE_DESCRIPTION": "Retain. NL Evoke next !M! Orbs."
 	},
 	"accelerator:KickStart": {
 		"NAME": "Kick-start",
@@ -317,5 +317,9 @@
 	"accelerator:Bake": {
 		"NAME": "Bake",
 		"DESCRIPTION": "Trigger the passive effect of your !M! leftmost orbs. NL Channel a Thermal Orb with !D! Potency."
+	},
+	"accelerator:Rage": {
+		"NAME": "Rage",
+		"DESCRIPTION": "Channel a Kinetic Orb with !D! Potency. NL Gain !M! strength for this turn."
 	}
 }

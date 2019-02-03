@@ -59,7 +59,8 @@ public class TheAccelerator extends CustomPlayer{
 		retVal.add(AcceleratorMod.PREFIX + Defend.ID);
 		retVal.add(AcceleratorMod.PREFIX + Reverse.ID);
 		retVal.add(AcceleratorMod.PREFIX + Reverse.ID);
-		retVal.add(AcceleratorMod.PREFIX + EvokeCommand.ID);
+		//retVal.add(AcceleratorMod.PREFIX + EvokeCommand.ID);
+		//retVal.add(AcceleratorMod.PREFIX + EvokeCommand.ID);
 		return retVal;
 	}
 	
