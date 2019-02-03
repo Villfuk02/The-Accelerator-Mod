@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.Plasma;
 
 import accelerator.AcceleratorMod;
@@ -46,7 +47,13 @@ public class Overheat extends CustomCard{
 	public void use(AbstractPlayer p, AbstractMonster m) {		
 		for(int i = 0; i < p.orbs.size(); i++){
 			if(p.orbs.get(i) instanceof ThermalOrb) {
-				p.orbs.set(i, new Plasma());
+				float x = p.orbs.get(i).cX;
+				float y = p.orbs.get(i).cY;
+				AbstractOrb o = new Plasma();
+				o.cX = x;
+				o.cY = y;
+				p.orbs.set(i, o);
+				p.orbs.get(i).setSlot(i, p.maxOrbs);
 			}
 		}
 	}

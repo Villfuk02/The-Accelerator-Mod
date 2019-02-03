@@ -36,7 +36,7 @@ public class LaserPointer extends CustomRelic {
     public void onUseCard(final AbstractCard card, final UseCardAction action) {
         if (card.type == AbstractCard.CardType.SKILL) {
             ++this.counter;
-            if (this.counter % 3 == 0) {
+            if (this.counter % 4 == 0) {
                 this.counter = 0;
                 this.flash();
                 AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));

@@ -53,9 +53,9 @@ public class BetterCloud extends CustomRelic {
 	@Override
     public void obtain()
     {
-        if (AbstractDungeon.player.hasRelic(Cloud.ID)) {
+        if (AbstractDungeon.player.hasRelic(AcceleratorMod.PREFIX + Cloud.ID)) {
             for (int i=0; i<AbstractDungeon.player.relics.size(); ++i) {
-                if (AbstractDungeon.player.relics.get(i).relicId.equals(Cloud.ID)) {
+                if (AbstractDungeon.player.relics.get(i).relicId.equals(AcceleratorMod.PREFIX + Cloud.ID)) {
                     instantObtain(AbstractDungeon.player, i, true);
                     break;
                 }

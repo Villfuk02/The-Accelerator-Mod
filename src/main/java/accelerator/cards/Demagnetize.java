@@ -25,7 +25,7 @@ public class Demagnetize extends CustomCard{
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
         		AbstractCard.CardType.POWER, AbstractCardEnum.ACC,
         		AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
-		this.magicNumber = this.baseMagicNumber = 2;
+		this.magicNumber = this.baseMagicNumber = 3;
 	}
 
 	@Override

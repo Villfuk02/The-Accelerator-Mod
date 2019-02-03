@@ -10,7 +10,7 @@
     "NAME": "Laser Pointer",
     "FLAVOR": "Let it show you the way.",
     "DESCRIPTIONS": [
-      "Every time you play #b3 #ySkills in a single turn, gain #b1 #yFocus."
+      "Every time you play #b4 #ySkills in a single turn, gain #b1 #yFocus."
     ]
   },
   "accelerator:AutoCompiler": {
@@ -45,14 +45,14 @@
     "NAME": "Holographic Scroll",
     "FLAVOR": "It becomes more real with every bit of energy it absorbs.",
     "DESCRIPTIONS": [
-      "Every time you #yChannel #b3 unique Orbs in a single turn, gain #b1 #yFocus."
+      "Every time you #yChannel #b4 unique Orbs in a single turn, gain #b1 #yFocus."
     ]
   },
   "accelerator:BetterCloud": {
     "NAME": "Octahedron Of Transcendence",
     "FLAVOR": "Straight out of Ĥ&<Զەȟլ3̇th dimension.",
     "DESCRIPTIONS": [
-      "Replaces #gInfinite #gSpeeds. Start first #b2 turns with an additional [E] [E] . NL At the end of every turn, #yEvoke your next #yOrb."
+      "Replaces #gInfinite #gSpeeds. Gain #b2 additional [E] [E] at the start of first #b2 turns of every combat. NL At the end of every turn, #yEvoke your next #yOrb."
     ]
   }
 }

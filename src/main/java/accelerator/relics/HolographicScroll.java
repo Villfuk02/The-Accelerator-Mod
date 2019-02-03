@@ -41,8 +41,8 @@ public class HolographicScroll extends ChannelRelic {
         if (orb.ID != null && !orb.ID.equals("Empty") && !orbList.contains(orb.ID)) {
             orbList.add(orb.ID);
         }
-        if(counter != orbList.size() % 3) {
-        	counter = orbList.size() % 3;
+        if(counter != orbList.size() % 4) {
+        	counter = orbList.size() % 4;
         	if(counter == 0 && orbList.size() > 0) {
                 this.flash();
                 AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
