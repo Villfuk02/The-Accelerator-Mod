@@ -68,7 +68,7 @@ public class BetterCloud extends CustomRelic {
 	
 	@Override
     public boolean canSpawn() {
-		return AbstractDungeon.player.hasRelic(Cloud.ID);
+		return AbstractDungeon.player.hasRelic(AcceleratorMod.PREFIX + Cloud.ID);
 	}
     
 	
