@@ -47,7 +47,10 @@ public class AllignedFields extends CustomCard{
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {		
-		AbstractDungeon.actionManager.addToBottom(new PassiveOrbAction(p.orbs.get(0)));
+		if(upgraded) {
+			AbstractDungeon.actionManager.addToBottom(new PassiveOrbAction(p.orbs.get(0)));
+			AbstractDungeon.actionManager.addToBottom(new PassiveOrbAction(p.orbs.get(0)));
+		}
 		AbstractDungeon.actionManager.addToBottom(new ChannelAction(new MagneticOrb(this.block)));
 		for(AbstractOrb o : p.orbs) {
 			if(o instanceof MagneticOrb)
