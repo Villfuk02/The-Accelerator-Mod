@@ -48,7 +48,7 @@
 	},
 	"accelerator:Threaten": {
 		"NAME": "Threaten",
-		"DESCRIPTION": "Channel a Potential Orb with !D! Potency. NL Apply 1 Vulnerable."
+		"DESCRIPTION": "Channel a Potential Orb with !D! Potency. NL Apply !M! Vulnerable."
 	},
 	"accelerator:Knockback": {
 		"NAME": "Knockback",
@@ -112,8 +112,8 @@
 	},
 	"accelerator:Newtons3": {
 		"NAME": "Newton's 3rd Law",
-		"DESCRIPTION": "Evoke your rightmost Kinetic orb. NL Gain Block equal to it's Potency.",
-		"UPGRADE_DESCRIPTION": "Evoke your most Potent Kinetic orb. NL Gain Block equal to it's Potency."
+		"DESCRIPTION": "Evoke your rightmost Kinetic orb. NL Gain !B! Block (equal to it's Potency).",
+		"UPGRADE_DESCRIPTION": "Evoke your most potent Kinetic orb. NL Gain !B! Block (equal to it's Potency)."
 	},
 	"accelerator:Roast": {
 		"NAME": "Roast",
@@ -129,8 +129,8 @@
 	},
 	"accelerator:Ground": {
 		"NAME": "Ground",
-		"DESCRIPTION": "Channel Potential Orb and Kinetic Orb, both with !D! Potency. NL Apply 1 Weak and Vulnerable.",
-        "UPGRADE_DESCRIPTION": "Channel Kinetic Orb and Potential Orb, both with !D! Potency. NL Apply 1 Vulnerable and Weak."
+		"DESCRIPTION": "Channel Potential Orb and Kinetic Orb, both with !D! Potency. NL Apply 2 Weak and Vulnerable.",
+        "UPGRADE_DESCRIPTION": "Channel Kinetic Orb and Potential Orb, both with !D! Potency. NL Apply 2 Vulnerable and Weak."
 	},
 	"accelerator:DarkMatter": {
 		"NAME": "Dark Matter",
@@ -138,8 +138,7 @@
 	},
 	"accelerator:NuclearReactor": {
 		"NAME": "Nuclear Reactor",
-		"DESCRIPTION": "Channel a Nuclear Orb with !M! Potency. NL (5 Damage in total) NL Channel 1 Plasma.",
-		"UPGRADE_DESCRIPTION": "Channel a Nuclear Orb with !M! Potency. NL (12 Damage in total) NL Channel 1 Plasma."
+		"DESCRIPTION": "Channel a Nuclear Orb with !M! Potency. NL (5 Damage in total) NL Channel 1 Plasma."
 	},
 	"accelerator:EnergyTransfer": {
 		"NAME": "Energy Transfer",
@@ -155,12 +154,12 @@
 	},
 	"accelerator:Impact": {
 		"NAME": "Impact",
-		"DESCRIPTION": "Channel 2 Kinetic Orbs with !D! Potency. NL Costs 1 less for every Kinetic Orb Channeled this turn."
+		"DESCRIPTION": "Channel 3 Kinetic Orbs with !D! Potency. NL Costs 1 less for every Kinetic Orb Channeled this turn."
 	},
 	"accelerator:AllignedFields": {
 		"NAME": "Alligned Fields",
 		"DESCRIPTION": "Channel a Magnetic Orb with !B! Potency. NL Trigger the passive effect of all your Magnetic Orbs.",
-		"UPGRADE_DESCRIPTION": "Trigger the passive effect of your rightmost Orb. NL Channel a Magnetic Orb with !B! Potency. NL Trigger the passive effect of all your Magnetic Orbs."
+		"UPGRADE_DESCRIPTION": "Trigger the passive effect of your rightmost Orb twice. NL Channel a Magnetic Orb with !B! Potency. NL Trigger the passive effect of all your Magnetic Orbs."
 	},
 	"accelerator:SolarFlare": {
 		"NAME": "Solar Flare",
@@ -169,8 +168,8 @@
 	},
 	"accelerator:Stabilize": {
 		"NAME": "Stabilize",
-		"DESCRIPTION": "Draw !M! card. NL Upgrade all cards in your hand for the rest of combat. NL Heal 1 HP for every card Upgraded. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Draw !M! cards. NL Upgrade all cards in your hand for the rest of combat. NL Heal 1 HP for every card Upgraded. NL Exhaust."
+		"DESCRIPTION": "Upgrade all cards in your hand for the rest of combat. NL Heal 1 HP for every card Upgraded. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Draw 1 card. NL Upgrade all cards in your hand for the rest of combat. NL Heal 1 HP for every card Upgraded. NL Exhaust."
 	},
 	"accelerator:PerpetuumMobile": {
 		"NAME": "Perpetuum Mobile",
@@ -186,7 +185,7 @@
 	},
 	"accelerator:Dynamo": {
 		"NAME": "Dynamo",
-		"DESCRIPTION": "Gain [E] for every 4 Orbs you Evoke."
+		"DESCRIPTION": "Gain [E] for every 5 Orbs you Evoke."
 	},
 	"accelerator:DoubleSlit": {
 		"NAME": "Double Slit",
@@ -255,7 +254,7 @@
 	},
 	"accelerator:Drain": {
 		"NAME": "Drain",
-		"DESCRIPTION": "Deal damage equal to !M! % of your most potent Potential Orb's Potency. NL Decrease its Potency by 3."
+		"DESCRIPTION": "Deal !D! damage NL ( !M! % of your most potent Potential Orb's Potency). NL Decrease its Potency by 3."
 	},
 	"accelerator:Exchange": {
 		"NAME": "Exchange",
@@ -321,5 +320,10 @@
 	"accelerator:Rage": {
 		"NAME": "Rage",
 		"DESCRIPTION": "Channel a Kinetic Orb with !D! Potency. NL Gain !M! strength for this turn."
+	},
+	"accelerator:Vacuum": {
+		"NAME": "Vacuum",
+		"DESCRIPTION": "The next Orb you Channel this turn has twice as much Potency. NL Works only on Orbs with Potency.",
+		"UPGRADE_DESCRIPTION": "The next !M! Orbs you Channel this turn have twice as much Potency. NL Works only on Orbs with Potency."
 	}
 }

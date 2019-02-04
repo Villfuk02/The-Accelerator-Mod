@@ -21,7 +21,7 @@ public class Impact extends CustomCard{
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 4;
-	private static final int DMG = 9;
+	private static final int DMG = 6;
 
 	public Impact() {
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
@@ -58,6 +58,7 @@ public class Impact extends CustomCard{
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {		
+		AbstractDungeon.actionManager.addToBottom(new ChannelAction(new KineticOrb(this.damage, m)));
 		AbstractDungeon.actionManager.addToBottom(new ChannelAction(new KineticOrb(this.damage, m)));
 		AbstractDungeon.actionManager.addToBottom(new ChannelAction(new KineticOrb(this.damage, m)));
 	}

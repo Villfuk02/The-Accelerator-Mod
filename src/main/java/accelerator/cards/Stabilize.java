@@ -20,14 +20,11 @@ public class Stabilize extends CustomCard{
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UP_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 1;
-	private static final int MAGIC = 1;
-	private static final int UP = 1;
 
 	public Stabilize() {
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
         		AbstractCard.CardType.SKILL, AbstractCardEnum.ACC,
         		AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
-		this.magicNumber = this.baseMagicNumber = MAGIC;
 		this.exhaust = true;
 		tags.add(AbstractCard.CardTags.HEALING);
 	}
@@ -41,7 +38,6 @@ public class Stabilize extends CustomCard{
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.upgradeMagicNumber(UP);
 			this.rawDescription = UP_DESCRIPTION;
 			initializeDescription();
 		} 
@@ -49,7 +45,8 @@ public class Stabilize extends CustomCard{
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
+		if(upgraded)
+			AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 		AbstractDungeon.actionManager.addToBottom(new UpgradeHealAction(1));
 	}
 }

@@ -22,7 +22,7 @@ public class MagneticLink extends CustomCard{
 	private static final int COST = 1;
 	private static final int MAGIC = 2;
 	private static final int UP = 1;
-	private static final int BLOCK = 3;
+	private static final int BLOCK = 4;
 
 	public MagneticLink() {
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,

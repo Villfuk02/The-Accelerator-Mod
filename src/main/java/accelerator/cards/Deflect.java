@@ -20,7 +20,7 @@ public class Deflect extends CustomCard{
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int BLOCK = 7;
+	private static final int BLOCK = 8;
 	private static final int UPGRADE = 3;
 
 	public Deflect() {

@@ -188,12 +188,11 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 		
 			// COLORLESS ()
 		
-			// BASIC (5)
+			// BASIC (4)
 				BaseMod.addCard(new Defend());
 				BaseMod.addCard(new Strike());
 				BaseMod.addCard(new Stream());
 				BaseMod.addCard(new Reverse());
-				BaseMod.addCard(new EvokeCommand());
 		
 			// COMMON (17)
 				//	Attacks (8)
@@ -257,14 +256,14 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new MobiusLoop());
 					BaseMod.addCard(new Generator());
 		
-			// RARE (18)
+			// RARE (19)
 				//	Attacks (4)
 					BaseMod.addCard(new Radiation());
 					BaseMod.addCard(new Engine());
 					BaseMod.addCard(new Drain());
 					BaseMod.addCard(new BlackHole());
 		
-				//	Skills (8)
+				//	Skills (9)
 					BaseMod.addCard(new MergeSort());
 					BaseMod.addCard(new Spring());
 					BaseMod.addCard(new Acceleration());
@@ -273,6 +272,7 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new Overheat());
 					BaseMod.addCard(new Magnetosphere());
 					BaseMod.addCard(new MagneticResonance());
+					BaseMod.addCard(new Vacuum());
 		
 				//	Powers (6)
 					BaseMod.addCard(new Friction());

@@ -24,7 +24,7 @@ public class Fragmentation extends CustomCard{
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int POT = 3;
-	private static final int UPGRADE = 1;
+	private static final int UPGRADE = 2;
 
 	public Fragmentation() {
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,

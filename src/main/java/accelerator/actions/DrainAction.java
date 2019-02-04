@@ -1,8 +1,6 @@
 package accelerator.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -43,14 +41,13 @@ public class DrainAction extends AbstractGameAction{
 		    		if(((PotentialOrb)p.orbs.get(i)).potency == max) {
 		    			PotentialOrb o = (PotentialOrb)p.orbs.get(i);
 
-		    			AbstractDungeon.actionManager.addToTop(new ChangePotencyAction(o, -3));
-			    		AbstractDungeon.actionManager.addToTop(new DamageAction(target, new DamageInfo(p, (o.potency*amount)/100), AttackEffect.BLUNT_HEAVY));		    			
+		    			AbstractDungeon.actionManager.addToTop(new ChangePotencyAction(o, -3));		    			
 			    		
 			    	    triggered = true;
 			    		return;
-		    			}
-		    		}	    		
-		    	}
+		    		}
+		    	}	    		
+		    }
 	    	
 	    	triggered = true;
 	    }		

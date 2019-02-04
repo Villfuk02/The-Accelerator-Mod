@@ -17,7 +17,7 @@ public class DynamoPower extends AbstractPower
 	
     public static final String[] DESCRIPTIONS = new String[] {
     		"Gain #b",
-    		" [E] for every 4 Orbs you #yEvoke. NL #b",
+    		" [E] for every 5 Orbs you #yEvoke. NL #b",
     		" Orbs left."
 	};
     
@@ -40,7 +40,7 @@ public class DynamoPower extends AbstractPower
     public void onEvokeOrb(AbstractOrb orb){
     	amount--;    	
     	if(amount <= 0) {
-    		amount += 4;
+    		amount += 5;
     		this.flash();
     		AbstractDungeon.actionManager.addToTop(new GainEnergyAction(energy));
     	}

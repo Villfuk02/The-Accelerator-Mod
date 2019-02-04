@@ -18,7 +18,7 @@ public class EnergyTransfer extends CustomCard{
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(AcceleratorMod.PREFIX + ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 3;
+	private static final int COST = 2;
 	private static final int AMT = 3;
 
 	public EnergyTransfer() {
@@ -37,7 +37,7 @@ public class EnergyTransfer extends CustomCard{
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.upgradeMagicNumber(2);
+			this.upgradeMagicNumber(1);
 		} 
 	}
 

@@ -25,7 +25,7 @@ public class TheoryOfEverything extends CustomCard{
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UP_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-	private static final int COST = 2;
+	private static final int COST = 1;
 
 	public TheoryOfEverything() {
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,

@@ -20,8 +20,8 @@ public class KickStart extends CustomCard{
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 0;
-	private static final int BLOCK = 10;
-	private static final int UPGRADE = 3;
+	private static final int BLOCK = 11;
+	private static final int UPGRADE = 4;
 
 	public KickStart() {
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,

@@ -3,7 +3,6 @@ package accelerator.actions;
 import java.util.Collections;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -43,9 +42,7 @@ public class Newton3Action extends AbstractGameAction{
 		    	}
 		    	for (int i = 0; i < p.orbs.size(); i++) {
 		    		if(p.orbs.get(i) instanceof KineticOrb) {
-		    			if(((KineticOrb)p.orbs.get(i)).potency == max) {
-
-			    			AbstractDungeon.actionManager.addToTop(new GainBlockAction(p, p, ((KineticOrb)p.orbs.get(i)).potency));
+		    			if(((KineticOrb)p.orbs.get(i)).potency == max) {    			
 		    				
 		    				p.orbs.get(i).onEvoke();
 		    	            final AbstractOrb orbSlot = new EmptyOrbSlot();
@@ -64,8 +61,6 @@ public class Newton3Action extends AbstractGameAction{
 	    	}else {
 	    		for (int i = 0; i < p.orbs.size(); i++) {
 		    		if(p.orbs.get(i) instanceof KineticOrb) {
-		    				
-		    			AbstractDungeon.actionManager.addToTop(new GainBlockAction(p, p, ((KineticOrb)p.orbs.get(i)).potency));
 		    			
 		    			p.orbs.get(i).onEvoke();
 		    	        final AbstractOrb orbSlot = new EmptyOrbSlot();

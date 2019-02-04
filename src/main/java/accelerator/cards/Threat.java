@@ -22,13 +22,14 @@ public class Threat extends CustomCard{
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int DMG = 8;
-	private static final int UPGRADE = 3;
+	private static final int MAGIC = 1;
 
 	public Threat() {
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
         		AbstractCard.CardType.ATTACK, AbstractCardEnum.ACC,
         		AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = DMG;
+		this.magicNumber = this.baseMagicNumber = MAGIC;
 	}
 
 	@Override
@@ -40,13 +41,13 @@ public class Threat extends CustomCard{
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.upgradeDamage(UPGRADE);			
+			this.upgradeMagicNumber(1);			
 		} 
 	}
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {		
 		AbstractDungeon.actionManager.addToBottom(new ChannelAction(new PotentialOrb(this.damage, m)));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m, 1, false), 1));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
 	}
 }

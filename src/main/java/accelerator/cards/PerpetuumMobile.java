@@ -19,8 +19,8 @@ public class PerpetuumMobile extends CustomCard{
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 2;
-	private static final int POT = 5;
-	private static final int UP = 2;
+	private static final int POT = 6;
+	private static final int UP = 3;
 
 	public PerpetuumMobile() {
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,

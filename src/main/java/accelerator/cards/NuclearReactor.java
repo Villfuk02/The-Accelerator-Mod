@@ -19,10 +19,8 @@ public class NuclearReactor extends CustomCard{
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(AcceleratorMod.PREFIX + ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String UP_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-	private static final int COST = 2;
+	private static final int COST = 3;
 	private static final int DMG = 3;
-	private static final int UPGRADE = 1;
 
 	public NuclearReactor() {
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
@@ -40,9 +38,7 @@ public class NuclearReactor extends CustomCard{
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.upgradeMagicNumber(UPGRADE);
-			this.rawDescription = UP_DESCRIPTION;
-			initializeDescription();
+			this.upgradeBaseCost(COST-1);
 		} 
 	}
 
