@@ -1,10 +1,9 @@
 package accelerator.relics;
 
-
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.defect.EvokeOrbAction;
+import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
@@ -35,7 +34,7 @@ public class Cloud extends CustomRelic {
     public void atTurnStart() {
         if (this.firstTurn ) {
             this.flash();
-            AbstractDungeon.actionManager.addToTop(new DrawCardAction(AbstractDungeon.player, 3));
+            AbstractDungeon.actionManager.addToBottom(new IncreaseMaxOrbAction(1));
             AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             this.firstTurn = false;
         }

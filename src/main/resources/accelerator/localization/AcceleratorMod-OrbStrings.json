@@ -38,7 +38,7 @@
     "NAME": "Nuclear Orb",
     "DESCRIPTION": [
       "When #yEvoked, Deals #b",
-      " #yDamage to #ra #rrandom #renemy and #yChannels #b2 #yNuclear Orbs with half the Potency. NL Not affected by #yFocus."
+      " #yDamage to #ra #rrandom #renemy and #yChannels #b2 #yNuclear Orbs with half the Potency. NL Not affected by damage modifiers. NL Not affected by #yFocus."
     ]
   }
 }

@@ -47,7 +47,7 @@ public class BlackHole extends CustomCard{
 		this.timesUpgraded++;
 		this.name = NAME + "+" + timesUpgraded;
 		this.initializeTitle();
-		this.upgradeDamage(this.baseDamage/5);
+		this.upgradeDamage(this.baseDamage/6);
 		
 	}
 

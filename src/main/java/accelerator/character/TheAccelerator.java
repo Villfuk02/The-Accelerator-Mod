@@ -7,6 +7,7 @@ import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
+import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -29,7 +30,7 @@ import accelerator.relics.Cloud;
 public class TheAccelerator extends CustomPlayer{
 
 
-	public static final String NAME = "The Orang";
+	public static final String NAME = "The Accelerator";
 
 	public TheAccelerator(String name, PlayerClass setClass) {
 		super(name, setClass, null, AcceleratorMod.ENERGY_ORB_PATH + "vfx.png", (String)null, (String)null);
@@ -38,6 +39,9 @@ public class TheAccelerator extends CustomPlayer{
 				getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(3));
 		
 		this.loadAnimation(AcceleratorMod.SKELETON_ATLAS, AcceleratorMod.SKELETON_JSON, 1.0f);
+		AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
+	    this.stateData.setMix("Hit", "Idle", 0.1F);
+	    e.setTimeScale(0.9F);
 		
 		this.energyOrb = new AcceleratorEnergyOrb();
 		
@@ -71,8 +75,8 @@ public class TheAccelerator extends CustomPlayer{
 	
 	@Override
 	public CharSelectInfo getLoadout() {
-		return new CharSelectInfo(NAME, "Yeah, I meant the #rreal one. NL This one's got the power of the #gOctahedron #gof #gTranscendence.",
-				75, 75, 4, 99, 5,
+		return new CharSelectInfo(NAME, "Dying ancient spirit with the power to control energy. NL He stopped his slow decay by possesing an automaton.",
+				75, 75, 3, 99, 5,
 			this, getStartingRelics(), getStartingDeck(), false);
 	}
 

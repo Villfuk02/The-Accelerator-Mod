@@ -21,7 +21,7 @@ public class DarkMatter extends CustomCard{
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 7;
-	private static final int DMG = 20;
+	private static final int DMG = 22;
 	private static final int UPGRADE = 3;
 
 	public DarkMatter() {

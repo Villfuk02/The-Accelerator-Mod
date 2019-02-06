@@ -112,8 +112,8 @@
 	},
 	"accelerator:Newtons3": {
 		"NAME": "Newton's 3rd Law",
-		"DESCRIPTION": "Evoke your rightmost Kinetic orb. NL Gain !B! Block (equal to it's Potency).",
-		"UPGRADE_DESCRIPTION": "Evoke your most potent Kinetic orb. NL Gain !B! Block (equal to it's Potency)."
+		"DESCRIPTION": "Evoke your rightmost Kinetic orb. NL Gain !B! Block NL (equal to it's Potency).",
+		"UPGRADE_DESCRIPTION": "Evoke your most potent Kinetic orb. NL Gain !B! Block NL (equal to it's Potency)."
 	},
 	"accelerator:Roast": {
 		"NAME": "Roast",
@@ -294,7 +294,7 @@
 	},
 	"accelerator:Chaos": {
 		"NAME": "Chaos",
-		"DESCRIPTION": "Channel !M! random Orbs with 3 Potency. NL Discard 1 random card."
+		"DESCRIPTION": "Channel !M! random Orbs with 3 Potency (Not affected by damage or Block modifiers). NL Discard 1 random card."
 	},
 	"accelerator:TheoryOfEverything": {
 		"NAME": "Theory Of Everything",

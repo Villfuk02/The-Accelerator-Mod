@@ -3,7 +3,7 @@
     "NAME": "Infinite Speeds",
     "FLAVOR": "Cool and good",
     "DESCRIPTIONS": [
-      "At the start of each combat, draw 3 additional cards. NL At the end of every turn, #yEvoke your next #yOrb."
+      "You have #b1 additional Orb slot. At the end of every turn, #yEvoke your next #yOrb."
     ]
   },
   "accelerator:LaserPointer": {
@@ -52,7 +52,7 @@
     "NAME": "Octahedron Of Transcendence",
     "FLAVOR": "Straight out of Ĥ&<Զەȟլ3̇th dimension.",
     "DESCRIPTIONS": [
-      "Replaces #gInfinite #gSpeeds. Gain #b2 additional [E] [E] at the start of first #b2 turns of every combat. NL At the end of every turn, #yEvoke your next #yOrb."
+      "Replaces #gInfinite #gSpeeds. NL You have #b1 additional Orb slot. NL Gain #b2 additional [E] [E] at the start of first #b2 turns of every combat. NL At the end of every turn, #yEvoke your next #yOrb."
     ]
   }
 }
