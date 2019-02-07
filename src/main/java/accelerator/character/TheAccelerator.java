@@ -15,6 +15,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
+import com.megacrit.cardcrawl.relics.BurningBlood;
+import com.megacrit.cardcrawl.relics.SnakeRing;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
@@ -70,6 +72,10 @@ public class TheAccelerator extends CustomPlayer{
 		ArrayList<String> retVal = new ArrayList<>();
 		retVal.add(AcceleratorMod.PREFIX + Cloud.ID);
 		UnlockTracker.markRelicAsSeen(AcceleratorMod.PREFIX + Cloud.ID);
+		retVal.add(BurningBlood.ID);
+		UnlockTracker.markRelicAsSeen(BurningBlood.ID);
+		retVal.add(SnakeRing.ID);
+		UnlockTracker.markRelicAsSeen(SnakeRing.ID);
 		return retVal;
 	}
 	
