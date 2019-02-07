@@ -46,6 +46,8 @@ public class InertiaAction extends AbstractGameAction{
 	    				pot.potency += ((CustomOrb)p.orbs.get(i)).potency;
 	    			empty.add(new EmptyOrbSlot(p.orbs.get(i).cX, p.orbs.get(i).cY));
 	    			    			
+	    		}else if (p.orbs.get(i) instanceof EmptyOrbSlot){
+	    			empty.add(p.orbs.get(i));
 	    		}else {
 	    			other.add(p.orbs.get(i));
 	    		}	    		   		
@@ -54,7 +56,7 @@ public class InertiaAction extends AbstractGameAction{
 	    		return;
             for (int i = 0; i < p.orbs.size(); i++) {
             	if(i < other.size()) {
-            		p.orbs.set(i, other.get(i));
+            		p.orbs.set(i, other.get(i));            		
             	} else if(i == other.size()) {
             		p.orbs.set(i, pot);
             		p.orbs.get(i).cX = empty.get(0).cX;

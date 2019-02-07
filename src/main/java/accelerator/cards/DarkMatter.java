@@ -44,7 +44,8 @@ public class DarkMatter extends CustomCard{
         	if(orb instanceof PotentialOrb)
         		g++;
         }  
-        this.setCostForTurn(this.cost - g);
+        if(this.cost - g <= this.costForTurn)
+        	this.setCostForTurn(this.cost - g);
         super.applyPowers();
         this.initializeDescription();
     }

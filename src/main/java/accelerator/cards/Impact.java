@@ -43,7 +43,8 @@ public class Impact extends CustomCard{
         	if(orb instanceof KineticOrb)
         		g++;
         }  
-        this.setCostForTurn(this.cost - g);
+        if(this.cost - g <= this.costForTurn)
+        	this.setCostForTurn(this.cost - g);
         super.applyPowers();
         this.initializeDescription();
     }
