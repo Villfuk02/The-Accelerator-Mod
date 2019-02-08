@@ -26,6 +26,7 @@ public class Intensify extends CustomCard{
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
         		AbstractCard.CardType.POWER, AbstractCardEnum.ACC,
         		AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+		this.baseMagicNumber = this.magicNumber = 1;
 	}
 
 	@Override
@@ -38,6 +39,7 @@ public class Intensify extends CustomCard{
 		if (!this.upgraded) {
 			upgradeName();
 			this.isInnate = true;
+			this.upgradeMagicNumber(1);
 			this.rawDescription = UP_DESCRIPTION;
 			initializeDescription();
 		} 
@@ -46,6 +48,6 @@ public class Intensify extends CustomCard{
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new IncreaseMaxOrbAction(2));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FocusPower(p, 1), 1));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FocusPower(p, this.magicNumber), this.magicNumber));
 	}
 }

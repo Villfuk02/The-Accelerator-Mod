@@ -26,7 +26,7 @@ public class Entropy extends CustomCard{
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
         		AbstractCard.CardType.SKILL, AbstractCardEnum.ACC,
         		AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
-		this.magicNumber = this.baseMagicNumber = 1;
+		this.magicNumber = this.baseMagicNumber = 2;
 	}
 
 	@Override
@@ -61,7 +61,7 @@ public class Entropy extends CustomCard{
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.upgradeMagicNumber(1);
+			this.upgradeMagicNumber(2);
 		} 
 	}
 

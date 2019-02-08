@@ -184,7 +184,7 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 	public void receiveEditCards() {
 		logger.info("Adding Accelerator Cards");
 		
-		//TOTAL (73)
+		//TOTAL (75)
 		
 			// COLORLESS ()
 		
@@ -194,8 +194,8 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 				BaseMod.addCard(new Stream());
 				BaseMod.addCard(new Reverse());
 		
-			// COMMON (17)
-				//	Attacks (8)
+			// COMMON (21)
+				//	Attacks (10)
 					BaseMod.addCard(new Propulsion());
 					BaseMod.addCard(new Threat());
 					BaseMod.addCard(new Knockback());
@@ -204,8 +204,10 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new Chaos());
 					BaseMod.addCard(new Shove());
 					BaseMod.addCard(new Rage());
+					BaseMod.addCard(new Blaze());
+					BaseMod.addCard(new Blizzare());
 		
-				//	Skills (9)
+				//	Skills (11)
 					BaseMod.addCard(new Deflect());
 					BaseMod.addCard(new IceSandwich());
 					BaseMod.addCard(new PushOut());
@@ -214,17 +216,17 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new Pull());
 					BaseMod.addCard(new Exchange());
 					BaseMod.addCard(new Reject());
-					BaseMod.addCard(new Wormhole());
+					BaseMod.addCard(new Cooldown());
+					BaseMod.addCard(new Polarize());
+					BaseMod.addCard(new Relativity());
 		
-			// UNCOMMON (33)
-				// 	Attacks(13)
-					BaseMod.addCard(new Blaze());
+			// UNCOMMON (31)
+				// 	Attacks(11)
 					BaseMod.addCard(new KnockOut());
 					BaseMod.addCard(new Ground());
 					BaseMod.addCard(new DarkMatter());
 					BaseMod.addCard(new Impact());
 					BaseMod.addCard(new NuclearReactor());
-					BaseMod.addCard(new Blizzare());
 					BaseMod.addCard(new PiecingWhale());
 					BaseMod.addCard(new Fragmentation());
 					BaseMod.addCard(new Inferno());
@@ -235,18 +237,18 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 				//	Skills (14)
 					BaseMod.addCard(new KickStart());
 					BaseMod.addCard(new MagneticLink());
-					BaseMod.addCard(new Polarize());
 					BaseMod.addCard(new Superposition());
 					BaseMod.addCard(new Newtons1());
 					BaseMod.addCard(new Newtons2());
 					BaseMod.addCard(new Newtons3());
-					BaseMod.addCard(new Cooldown());
-					BaseMod.addCard(new Relativity());
 					BaseMod.addCard(new AllignedFields());
 					BaseMod.addCard(new Stabilize());
 					BaseMod.addCard(new Entropy());
 					BaseMod.addCard(new Research());
 					BaseMod.addCard(new Encryption());
+					BaseMod.addCard(new Wormhole());
+					BaseMod.addCard(new MergeSort());
+					BaseMod.addCard(new Spring());
 		
 				// 	Powers (6)
 					BaseMod.addCard(new Intensify());
@@ -257,15 +259,14 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new Generator());
 		
 			// RARE (19)
-				//	Attacks (4)
+				//	Attacks (5)
 					BaseMod.addCard(new Radiation());
 					BaseMod.addCard(new Engine());
 					BaseMod.addCard(new Drain());
 					BaseMod.addCard(new BlackHole());
+					BaseMod.addCard(new Induction());
 		
-				//	Skills (9)
-					BaseMod.addCard(new MergeSort());
-					BaseMod.addCard(new Spring());
+				//	Skills (7)
 					BaseMod.addCard(new Acceleration());
 					BaseMod.addCard(new GrowingPotential());
 					BaseMod.addCard(new Investigation());
@@ -274,13 +275,14 @@ public class AcceleratorMod implements PostExhaustSubscriber,
 					BaseMod.addCard(new MagneticResonance());
 					BaseMod.addCard(new Vacuum());
 		
-				//	Powers (6)
+				//	Powers (7)
 					BaseMod.addCard(new Friction());
 					BaseMod.addCard(new EnergyTransfer());
 					BaseMod.addCard(new Dynamo());
 					BaseMod.addCard(new Efficiency());
 					BaseMod.addCard(new Spin());
 					BaseMod.addCard(new UniversalForm());
+					BaseMod.addCard(new Overflow());
 		
 	}
 

@@ -27,7 +27,7 @@ public class Blaze extends CustomCard{
 	public Blaze() {
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
         		AbstractCard.CardType.ATTACK, AbstractCardEnum.ACC,
-        		AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY);
+        		AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ALL_ENEMY);
 		this.baseDamage = DMG;
 		this.baseMagicNumber = this.magicNumber = MAGIC;
 	}

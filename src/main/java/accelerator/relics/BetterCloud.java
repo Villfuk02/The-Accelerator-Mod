@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.defect.EvokeOrbAction;
+import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
@@ -27,6 +28,7 @@ public class BetterCloud extends CustomRelic {
 	@Override
 	public void atBattleStart() {
         this.counter = 2;
+        AbstractDungeon.actionManager.addToBottom(new IncreaseMaxOrbAction(1));
     }
 	
 	@Override

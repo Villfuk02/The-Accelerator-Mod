@@ -39,8 +39,8 @@
 	},
 	"accelerator:Intensify": {
 		"NAME": "Intensify",
-		"DESCRIPTION": "Gain 2 Orb slots. NL Gain 1 Focus.",
-		"UPGRADE_DESCRIPTION": "Innate. NL Gain 2 Orb slots. NL Gain 1 Focus."
+		"DESCRIPTION": "Gain 2 Orb slots. NL Gain !M! Focus.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Gain 2 Orb slots. NL Gain !M! Focus."
 	},
 	"accelerator:MagneticLink": {
 		"NAME": "Magnetic Link",
@@ -129,8 +129,8 @@
 	},
 	"accelerator:Ground": {
 		"NAME": "Ground",
-		"DESCRIPTION": "Channel Potential Orb and Kinetic Orb, both with !D! Potency. NL Apply 2 Weak and Vulnerable.",
-        "UPGRADE_DESCRIPTION": "Channel Kinetic Orb and Potential Orb, both with !D! Potency. NL Apply 2 Vulnerable and Weak."
+		"DESCRIPTION": "Channel Potential and Kinetic Orb, both with !D! Potency. NL Apply 2 Weak and Vulnerable.",
+        "UPGRADE_DESCRIPTION": "Channel Kinetic and Potential Orb, both with !D! Potency. NL Apply 2 Vulnerable and Weak."
 	},
 	"accelerator:DarkMatter": {
 		"NAME": "Dark Matter",
@@ -138,7 +138,7 @@
 	},
 	"accelerator:NuclearReactor": {
 		"NAME": "Nuclear Reactor",
-		"DESCRIPTION": "Channel a Nuclear Orb with !M! Potency. NL (5 Damage in total) NL Channel 1 Plasma."
+		"DESCRIPTION": "Channel a Nuclear Orb with !M! Potency. NL (12 Damage in total) NL Channel 1 Plasma."
 	},
 	"accelerator:EnergyTransfer": {
 		"NAME": "Energy Transfer",
@@ -202,13 +202,12 @@
 	},
 	"accelerator:Research": {
 		"NAME": "Research",
-		"DESCRIPTION": "Draw cards until you draw a Skill or your draw pile is empty. NL Draw !M! card.",
-		"UPGRADE_DESCRIPTION": "Draw cards until you draw a Skill or your draw pile is empty. NL Draw !M! cards."
+		"DESCRIPTION": "Draw cards until you draw a Skill or your draw pile is empty. NL Draw !M! cards."
 	},
 	"accelerator:Investigation": {
 		"NAME": "Investigation",
-		"DESCRIPTION": "Draw cards until you draw 2 cards which cost 0 energy or your hand is full.",
-		"UPGRADE_DESCRIPTION": "Retain. NL Draw cards until you draw 2 cards which cost 0 energy or your hand is full."
+		"DESCRIPTION": "Draw cards until you draw 2 cards which do not cost 0 energy energy or your hand is full.",
+		"UPGRADE_DESCRIPTION": "Retain. NL Draw cards until you draw 2 cards which do not cost 0 energy energy or your hand is full."
 	},
 	"accelerator:Blizzare": {
 		"NAME": "Blizzare",
@@ -263,8 +262,8 @@
 	},
 	"accelerator:Wormhole": {
 		"NAME": "Wormhole",
-		"DESCRIPTION": "Choose a new target for ALL currently Channeled Potential Orbs.",
-		"UPGRADE_DESCRIPTION": "Choose a new target for ALL currently Channeled Kinetic and Potential Orbs."
+		"DESCRIPTION": "Choose a new target for ALL Kinetic and Potential Orbs.",
+		"UPGRADE_DESCRIPTION": "Choose a new target for ALL Kinetic and Potential Orbs and Evoke them."
 	},
 	"accelerator:Reject": {
 		"NAME": "Reject",
@@ -325,5 +324,15 @@
 		"NAME": "Vacuum",
 		"DESCRIPTION": "The next Orb you Channel this turn has twice as much Potency. NL Works only on Orbs with Potency.",
 		"UPGRADE_DESCRIPTION": "The next !M! Orbs you Channel this turn have twice as much Potency. NL Works only on Orbs with Potency."
+	},
+	"accelerator:Induction": {
+		"NAME": "Induction",
+		"DESCRIPTION": "Channel a Thermal Orb with !D! Potency and a Magnetic Orb with !B! Potency NL ( !M! Potency for each enemy). NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Channel a Thermal Orb with !D! Potency and a Magnetic Orb with !B! Potency NL ( !M! Potency for each enemy). NL Exhaust."
+	},
+	"accelerator:Overflow": {
+		"NAME": "Overflow",
+		"DESCRIPTION": "ALL cards which cost 3 or more energy become free to play once.",
+		"UPGRADE_DESCRIPTION": "ALL cards which cost 3 or more energy become free to play for the rest of the combat."
 	}
 }

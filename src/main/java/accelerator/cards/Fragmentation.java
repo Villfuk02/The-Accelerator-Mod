@@ -23,7 +23,7 @@ public class Fragmentation extends CustomCard{
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int POT = 3;
+	private static final int POT = 4;
 	private static final int UPGRADE = 2;
 
 	public Fragmentation() {

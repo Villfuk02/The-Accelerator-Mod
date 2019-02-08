@@ -22,6 +22,7 @@ public class Impact extends CustomCard{
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 4;
 	private static final int DMG = 6;
+	private static final int UP = 2;
 
 	public Impact() {
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
@@ -53,7 +54,7 @@ public class Impact extends CustomCard{
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.upgradeBaseCost(COST-1);			
+			this.upgradeDamage(UP);			
 		} 
 	}
 

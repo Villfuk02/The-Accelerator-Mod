@@ -25,7 +25,7 @@ public class MergeSort extends CustomCard{
 	public MergeSort() {
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
         		AbstractCard.CardType.SKILL, AbstractCardEnum.ACC,
-        		AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
+        		AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 	}
 
 	@Override

@@ -35,7 +35,8 @@ public class InvestigationAction extends AbstractGameAction{
 	    this.tickDuration();
 	    if(!triggered) {
 	    	
-	    	if (AbstractDungeon.player.hand.size() >= BaseMod.MAX_HAND_SIZE) {	    		
+	    	if (AbstractDungeon.player.hand.size() >= BaseMod.MAX_HAND_SIZE) {	
+		        AbstractDungeon.actionManager.addToTop(new DrawCardAction(AbstractDungeon.player,1));    		
 	    		this.isDone = true;
 	    		return;
 	        }
@@ -51,7 +52,7 @@ public class InvestigationAction extends AbstractGameAction{
 	        }
 	    	
 	        AbstractCard card = AbstractDungeon.player.drawPile.getTopCard();
-	        if (card.costForTurn != 0) {
+	        if (card.costForTurn == 0) {
 	            AbstractDungeon.actionManager.addToTop(new InvestigationAction());
 	        }
 	        AbstractDungeon.actionManager.addToTop(new DrawCardAction(AbstractDungeon.player,1));

@@ -29,7 +29,7 @@ public class Relativity extends CustomCard{
 	public Relativity() {
 		super(AcceleratorMod.PREFIX + ID, NAME, AcceleratorMod.CARD_IMG_PATH + ID + ".png", COST, DESCRIPTION,
         		AbstractCard.CardType.SKILL, AbstractCardEnum.ACC,
-        		AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+        		AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
 		this.baseMagicNumber = this.magicNumber = AMT;
 	}
 
@@ -51,7 +51,7 @@ public class Relativity extends CustomCard{
 	public void use(AbstractPlayer p, AbstractMonster m) {		
 		for(AbstractOrb o : p.orbs) {
 			if(o instanceof CustomOrb) {
-				AbstractDungeon.actionManager.addToBottom(new ChangePotencyAction((CustomOrb) o, -3));
+				AbstractDungeon.actionManager.addToBottom(new ChangePotencyAction((CustomOrb) o, -2));
 			}				
 		}
 		for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {				
