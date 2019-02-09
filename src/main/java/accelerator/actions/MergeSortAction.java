@@ -59,7 +59,7 @@ public class MergeSortAction extends AbstractGameAction{
 	    			nonCustom.add(p.orbs.get(i));
 	    		}
 	    		
-	    		Collections.sort(types, (CustomOrb o1, CustomOrb o2)->o2.potency-o1.potency);	    		   		
+	    		Collections.sort(types, (CustomOrb o1, CustomOrb o2)->o1.potency-o2.potency);	    		   		
 	    	}
 	    	
 	    	AcceleratorMod.logger.debug(types.size() + "," + nonCustom.size() + "," + empty.size() + "/" + p.orbs.size());

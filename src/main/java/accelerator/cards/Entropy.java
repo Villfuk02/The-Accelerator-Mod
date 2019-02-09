@@ -61,7 +61,7 @@ public class Entropy extends CustomCard{
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.upgradeMagicNumber(2);
+			this.upgradeMagicNumber(1);
 		} 
 	}
 

@@ -1,5 +1,6 @@
 package accelerator.cards;
 
+import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -50,5 +51,6 @@ public class Blizzare extends CustomCard{
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new ChannelAction(new NuclearOrb(this.magicNumber)));
 		AbstractDungeon.actionManager.addToBottom(new ChannelAction(new Frost()));
+		AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, 1, false));
 	}
 }

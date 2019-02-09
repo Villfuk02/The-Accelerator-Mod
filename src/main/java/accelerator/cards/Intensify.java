@@ -39,7 +39,6 @@ public class Intensify extends CustomCard{
 		if (!this.upgraded) {
 			upgradeName();
 			this.isInnate = true;
-			this.upgradeMagicNumber(1);
 			this.rawDescription = UP_DESCRIPTION;
 			initializeDescription();
 		} 

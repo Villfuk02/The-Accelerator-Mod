@@ -3,7 +3,7 @@
     "NAME": "Infinite Speeds",
     "FLAVOR": "Cool and good",
     "DESCRIPTIONS": [
-      "You have #b1 additional Orb slot. At the end of every turn, #yEvoke your next #yOrb."
+      "Gain #b1 additional Orb slot, [E] and heal 3 HP on your first turn. NL At the end of every turn, #yEvoke your next #yOrb."
     ]
   },
   "accelerator:LaserPointer": {
@@ -52,7 +52,7 @@
     "NAME": "Octahedron Of Transcendence",
     "FLAVOR": "Straight out of Ĥ&<Զەȟլ3̇th dimension.",
     "DESCRIPTIONS": [
-      "Replaces #gInfinite #gSpeeds. NL You have #b1 additional Orb slot. NL Gain #b2 additional [E] [E] at the start of first #b2 turns of every combat. NL At the end of every turn, #yEvoke your next #yOrb."
+      "Replaces #gInfinite #gSpeeds. NL You have #b1 additional Orb slot. NL Gain #b2 additional [E] [E] and heal #b2 HP at the start of first #b2 turns of every combat. NL At the end of every turn, #yEvoke your next #yOrb."
     ]
   }
 }

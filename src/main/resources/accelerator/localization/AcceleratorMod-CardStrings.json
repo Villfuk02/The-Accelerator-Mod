@@ -211,8 +211,8 @@
 	},
 	"accelerator:Blizzare": {
 		"NAME": "Blizzare",
-		"DESCRIPTION": "Channel a Nuclear Orb with !M! Potency. NL (4 Damage in total) NL Channel 1 Frost.",
-		"UPGRADE_DESCRIPTION": "Channel a Nuclear Orb with !M! Potency. NL (5 Damage in total) NL Channel 1 Frost."
+		"DESCRIPTION": "Channel a Nuclear Orb with !M! Potency. NL (4 Damage in total) NL Channel 1 Frost. NL Discard 1 card.",
+		"UPGRADE_DESCRIPTION": "Channel a Nuclear Orb with !M! Potency. NL (5 Damage in total) NL Channel 1 Frost. NL Discard 1 card."
 	},
 	"accelerator:PiecingWhale": {
 		"NAME": "Piecing Whale",

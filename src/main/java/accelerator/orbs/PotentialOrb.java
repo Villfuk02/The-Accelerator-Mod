@@ -35,7 +35,7 @@ public static final String ID = "PotentialOrb";
 		int a = 0;
 		if(AbstractDungeon.player.hasPower(FocusPower.POWER_ID))
 			a = AbstractDungeon.player.getPower(FocusPower.POWER_ID).amount;
-		a += 5;
+		a += 4;
 		a *= 5;
 		this.description = this.descriptions[0] + a + this.descriptions[1] + potency + this.descriptions[2] + getTargetDescription() + this.descriptions[3];
 		}
@@ -65,7 +65,7 @@ public static final String ID = "PotentialOrb";
 		int a = 0;
 		if(AbstractDungeon.player.hasPower(FocusPower.POWER_ID))
 			a = AbstractDungeon.player.getPower(FocusPower.POWER_ID).amount;
-		a += 5;		
+		a += 4;		
 		r = (r*(20+a)+19)/20;
 		if(r < 0)
 			r = 0;
